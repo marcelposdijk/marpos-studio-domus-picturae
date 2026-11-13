@@ -1,45 +1,52 @@
 # Domus Picturae · Marpos Studio + Astro
 
-A separate multilingual gallery demonstration adapted from [mearashadowfax/DomusPicturae](https://github.com/mearashadowfax/DomusPicturae). Original gallery design, animations, English/French/German content and MIT attribution are preserved. Marpos Studio replaces Keystatic as the editing workspace.
+A multilingual gallery demonstration adapted from [mearashadowfax/DomusPicturae](https://github.com/mearashadowfax/DomusPicturae), MIT. The gallery design, animations and English/French/German content are preserved. Marpos Studio provides the editing workspace.
 
-**Source is pushed to GitHub; this fork is not deployed.** The upstream Vercel website is not this demo. `SITE_URL` defaults to the reserved placeholder `https://domus-picturae.example`; set the real production origin when deploying.
+**This fork is not deployed.** The upstream Vercel website is not this demonstration. `SITE_URL` defaults to the reserved origin `https://domus-picturae.example` until a production host is chosen.
 
 ## Try it
 
-Use Node **22.23.3 or newer** (Node 24 is recommended) and pnpm 10.33.3:
+Use Node **22.23.3+** (Node 24 recommended) and pnpm 10.33.3:
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open the repository folder with **Open local repository** in Marpos Studio. All editing happens in this separate working directory. See [the short demo guide](MARPOS-STUDIO.md) for multilingual editing, image uploads, references and previews.
+Open the repository with **Open local repository** in the current Marpos Studio development build. See [the demo guide](MARPOS-STUDIO.md).
+
+## Editing
+
+Each news item, exhibition, workshop and ordinary page is now **one Markdown document** with Details, English, Français and Deutsch tabs. One save includes shared details and all three translations. The separate Stories collections have been consolidated and removed; all 45 existing translated texts are preserved.
+
+Artists, artworks, Homepage, About and gallery settings retain their structured fields. Localisable fields show full language names; shared dates, dimensions, relations and images stay shared. Collection navigation has distinct icons, labels and useful property filters. Language story tabs choose the matching page in an open preview.
+
+**Photos** contains 77 native image records. **Videos** is a real YouTube library, seeded with the existing upstream showreel link (IAG Cargo’s National Gallery teaser). Both libraries have native schemas, `.navigation.yml` media settings and root `studio.libraries` references. The same libraries serve field choosers and story insertion. Photo uploads go to `public/images/library/`; video thumbnails can reuse a photo, use YouTube’s display fallback, or upload via the configured `public/images/video-thumbnails/` destination. Workshop-card hover previews remain their original local MP4 clips, clearly labelled separately from the YouTube library.
+
+## Content contract
+
+- `src/content-model/collections.ts` describes editorial fields once; `zod.ts` derives native Astro schemas. `src/content.config.ts` declares local globs. `studio.ts` defines photo/video schemas.
+- `content/news`, `exhibitions`, `workshops` and `pages` contain `.md` records, with the original structured details in frontmatter and all language bodies in one `::localized-story` wrapper.
+- `studio.blocks` maps each language tab to one protected Markdown slot. The website’s reader removes the wrapper and renders only the requested locale, falling back to English. No Vue component or Nuxt dependency is involved. Fenced code and HTML are protected when reading boundaries.
+- New content receives the language tabs and an empty, valid body template through the native schema defaults and collection `studio.bodyTemplate`. Use a Studio build with that support.
+- Artists, artworks and fixed site settings remain JSON. Original source image bytes live in `public/images`; decorative hero, 404 and template screenshots remain imported assets.
+- `studio.preview.json` maps existing entries to all three locale routes. After creating or renaming entries, use **Set preview page** immediately or run `pnpm studio:previews` to regenerate project mappings. New generic pages have routes in every locale; navigation links are configured separately.
+
+Astro is pinned to **7.4.0** for compatibility with Studio’s Node 22.23.3 runtime. Keystatic was removed because Studio now manages the native documents and media.
+
+## Verify
 
 ```sh
 pnpm check
 pnpm test
 pnpm build
-pnpm format:check
 pnpm verify:demo
+pnpm format:check
+MARPOS_STUDIO_ROOT=/absolute/path/to/marpos-studio pnpm verify:studio
 ```
 
-`verify:demo` checks the complete rendered route and image graph, content references, locale stories and media configuration after a build. To additionally exercise the real Studio backend, run `MARPOS_STUDIO_ROOT=/absolute/path/to/marpos-studio pnpm verify:studio`; the Studio checkout must have its `content_cli` example built. The integration check uses a temporary content copy and never edits your actual demo content.
+The optional integration check requires Studio’s `content_cli` example to be built. It runs on a disposable copy and checks native discovery, one-document language editing/save/reopen, all six entity creation forms, photo/video choosers, actual uploads, video validation and rendering in a fresh website build.
 
-## Content contract
+The site builds to static `dist/`. Before deployment, configure `SITE_URL`, clean URLs and any intended form services. Forms keep upstream demo mode until configured. GitHub Pages needs an explicit base-path review; it has not been enabled.
 
-- `src/content-model/collections.ts` remains the shared editorial model. `zod.ts` derives native Astro schemas; `studio.ts` adds model-derived story collections and the native photo schema.
-- `content/artists`, `artworks`, `news`, `exhibitions`, `workshops` and `pages` contain ordinary JSON records. Shared fields stay shared; localisable fields contain `en`, `fr` and `de` values with English fallback.
-- Homepage, About and site settings are fixed JSON singletons. No duplicate settings records can be created in Studio.
-- `content/<type>-stories/*.md` holds long text. Each story has a title, parent `entry` reference and `locale`, plus a normal Markdown body. Filenames can change independently of the parent. Duplicate parent/locale stories fail verification and rendering.
-- `content/photos/*.json` contains **77 real media records**, backed by `public/images`. `content/.navigation.yml` registers `studio.libraries.images: photos`; the photo folder enables the media view and uploads to `public/images/library`. Nested image fields expose Studio media controls. No YouTube library is declared: workshop previews remain the original local MP4 files.
-- `studio.preview.json` maps existing records and stories to the actual locale routes. After adding or renaming entries, run `pnpm studio:previews`, or use **Set preview page** for a new story. Plain pages also have generic routes in all three locales.
-
-The old directory `index.json` + `body/<locale>.md` convention was migrated to flat records and linked stories so Studio can create both through native globs. The original JSON fields, Markdown prose and image bytes were preserved. Keystatic and its adapter were removed because their old paths and separate authoring UI no longer match this workflow. Decorative hero, 404 and template screenshot assets stay in `src/assets`; editable gallery images use `public` and still pass through `picture()` and Astro optimisation.
-
-Astro is pinned to **7.4.0**, whose Node requirements work with Studio's bundled Node 22.23.3. Later upstream patches require a newer Node patch; do not upgrade without rechecking the desktop preview runtime. No Marpos Studio source changes are required.
-
-## Deployment and forms
-
-This is a static Astro build. No deployment has been performed or requested. Before deploying, set `SITE_URL`, configure hosting to serve Astro's generated clean URLs, and supply any intended form service endpoints. Newsletter and workshop registration keep upstream's demo mode until configured. GitHub Pages would additionally need a deliberate base-path and URL review; no Pages workflow has been enabled.
-
-See [deployment notes](docs/deployment.md), [content notes](docs/content.md), [locale conventions](docs/i18n.md), the [original README](docs/UPSTREAM-README.md) and [LICENSE](LICENSE).
+See [content](docs/content.md), [locale conventions](docs/i18n.md), [deployment](docs/deployment.md), [source provenance](docs/SOURCE-PROVENANCE.md), the [original README](docs/UPSTREAM-README.md) and [LICENSE](LICENSE).

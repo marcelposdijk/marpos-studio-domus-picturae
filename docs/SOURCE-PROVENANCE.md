@@ -15,3 +15,11 @@ The original design components, CSS, locale UI strings, artist/artwork presentat
 Verified with Studio's exact Node 22.23.3 runtime, pinned Astro 7.4.0, native collection inspection and the actual ContentStore upload/save service. The desktop app showed the 77-image library, the artwork image chooser, structured locale fields and live English/French/German artwork previews. See `MARPOS-STUDIO.md` for the demo steps and check commands.
 
 This fork has not been deployed. No production publication or GitHub Pages configuration was performed.
+
+## Unified editor revision
+
+The 15 news/exhibition/workshop/page records and their 45 translated bodies are now consolidated into 15 Markdown documents. A migration audit compared every original structured field and translated body text before removing the old split files. All original prose is retained; wrapper whitespace is normalized. Workshop `video` was renamed to `previewClip` to keep the local MP4 field separate from the YouTube chooser; the actual paths and rendering are preserved.
+
+The 77-photo library remains intact. A native video library uses the existing upstream showreel (`WBwNw4WjV7g`, “IAG Cargo | The National Gallery teaser”); YouTube’s oEmbed endpoint confirmed embedding availability during preparation. Its default thumbnail comes from YouTube unless an author selects a custom photo.
+
+Studio improvements include labelled/icon tabs in declared order, localized title initialization, body templates for new Markdown records, locale-aware preview selection and clearer shared-identifier messaging. These require the current Studio development build.

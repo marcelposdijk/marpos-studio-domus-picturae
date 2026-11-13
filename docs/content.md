@@ -1,15 +1,34 @@
 # Content and editing
 
-See [the demo guide](../MARPOS-STUDIO.md) and [README](../README.md) for the current Marpos Studio contract.
+The shared model lives in `src/content-model/collections.ts`. Fields are described once; `zod.ts` derives native Astro schemas and human-readable labels. Add editorial fields there rather than writing them into `src/content.config.ts`.
 
-The shared model is `src/content-model/collections.ts`; `fields.ts` supplies descriptors and `zod.ts` derives native Astro schemas. Add editorial fields there, not in `src/content.config.ts`. `studio.ts` derives four story collections from model body markers and defines the photo record schema. The old Keystatic adapter is intentionally removed.
+Artists and artworks use flat JSON records. Fixed settings use `index.json`. News, exhibitions, workshops and pages use `layout: "markdown"`: one `.md` record contains structured frontmatter plus English, French and German body slots. No separate story collection or parent record is needed.
 
-JSON records live at `content/<collection>/<slug>.json`; settings at `content/<singleton>/index.json`. Original localisable fields retain `{ en, fr, de }` values. Native Astro references power artist, featured artwork and story-parent pickers. Studio's reference migration can keep declared relationships intact when an identifier changes.
+`studio.blocks` gives the editor Details and three language tabs. The protected body layout is:
 
-Long text is ordinary Markdown at `content/<collection>-stories/<filename>.md`. Frontmatter has `title`, `entry` (the parent identifier) and `locale` (`en`, `fr`, `de`). Rendering uses the declared relation, not the filename, and preserves English fallback and upstream's split-closing-paragraph layout. A duplicate parent/locale pair is invalid.
+```md
+::localized-story
+#en
 
-Editable image URLs begin `/images/`; actual files live under `public/images`. `picture()` validates local image paths and reads real dimensions before passing metadata to Astro's Image service. Image uploads need no source manifest update. Decorative imports remain under `src/assets/images`.
+English text.
 
-Photos are native JSON entries with title, image `{src, alt}`, optional thumbnail, categories, credit, visible and order. Root and collection `.navigation.yml` files configure picker discovery, filters and upload destination. All gallery image fields carry a native media input hint. Website gallery cards still query the original artwork/programme records; Photos is the reusable authoring library, not an additional public gallery page.
+#fr
 
-Add a new type in the shared model, register it in `src/content.config.ts`, add views and locale routes, and update preview generation/verification. New fields on existing types need only the shared descriptor. Run all documented checks before pushing.
+Texte français.
+
+#de
+
+Deutscher Text.
+
+::
+```
+
+This is a storage convention shared by Studio’s existing Markdown slot editor and the website’s `readLocalizedStory()` reader. The website removes the wrapper before rendering the selected language. It is not a Vue/Nuxt component and does not require Nuxt. Fenced code and HTML are protected while reading slot boundaries. Missing/duplicate/broken boundaries fail clearly; ordinary edits only replace one slot. Native frontmatter validation and website body rendering remain separate checks.
+
+Schema defaults include `studio.blocks`; collection metadata supplies `studio.bodyTemplate` and `defaultLocale`. The current Studio creates the localized title without flattening it to a string, initializes the body template, preserves declared tab order and follows each language tab’s declared `locale` to a matching preview route.
+
+`studio.ts` contains native photo and video schemas. Photo records use title, image `{src, alt}`, optional thumbnail, categories, credit, visible and order. Video records use title, YouTube ID, optional image thumbnail, categories, visible and order. Root and collection `.navigation.yml` files configure real picker discovery, media views, filters and upload destinations. Existing local workshop MP4s use the clearly labelled `previewClip` field and retain their hover behaviour.
+
+All editable image URLs are public `/images/` paths. `picture()` validates files, reads their dimensions and supplies Astro optimisation metadata. Decorative source assets remain imported. The gallery website queries the catalogue/programme records; media libraries are reusable authoring sources.
+
+After adding routes/types, update preview generation and verification. Run the README checks and keep all translations and shared fields intact.

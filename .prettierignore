@@ -9,4 +9,7 @@ public
 .DS_Store
 
 # Editorial Markdown is owned by Studio; preserve the imported prose bytes.
-content/*-stories/*.md
+content/news/*.md
+content/exhibitions/*.md
+content/workshops/*.md
+content/pages/*.md

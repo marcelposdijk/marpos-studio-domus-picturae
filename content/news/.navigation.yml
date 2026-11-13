@@ -1,5 +1,5 @@
 title: News
-icon: i-lucide-file-text
+icon: i-lucide-newspaper
 studio:
   filters: ["pubDate"]
-  story: false
+  story: true

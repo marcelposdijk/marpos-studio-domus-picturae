@@ -1,5 +1,5 @@
 title: Exhibitions
-icon: i-lucide-file-text
+icon: i-lucide-gallery-horizontal-end
 studio:
   filters: ["startDate"]
-  story: false
+  story: true

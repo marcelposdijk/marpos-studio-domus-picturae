@@ -31,7 +31,7 @@ export interface TextField<
   required: R;
 }
 
-/** A long-form Markdown body stored per locale in `body/<locale>.md`. */
+/** A long-form Markdown body stored in language slots in the entry’s Markdown body. */
 export interface BodyField extends Base {
   kind: "body";
 }
@@ -276,7 +276,7 @@ export type EntryLayout =
   /** `content/<name>/<slug>.json` */
   | "file"
   /** Long-form records now use flat JSON plus linked locale stories. */
-  | "directory";
+  | "markdown";
 
 export interface CollectionDescriptor<S extends Shape = Shape> {
   label: string;

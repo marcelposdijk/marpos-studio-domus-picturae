@@ -4,8 +4,8 @@ import { locales, type Locale } from "@/i18n/config";
 import { pick } from "@/i18n/localized";
 
 /**
- * The Localisable body of a directory-style entry: where its Markdown lives,
- * which locale's file is used, and how it becomes HTML. Pure: the sources are
+ * The Localisable body of a multilingual Markdown entry:
+ * which locale is used, and how it becomes HTML. Pure: the sources are
  * passed in (the content module hands over the glob), so it runs in tests.
  */
 
@@ -39,7 +39,7 @@ export function bodyPath(
   id: string,
   locale: Locale,
 ): string {
-  return `/content/${collection}-stories/${id}.${locale}.md`;
+  return `/content/${collection}/${id}.md#${locale}`;
 }
 
 /**

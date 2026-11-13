@@ -1,5 +1,5 @@
 title: Pages
-icon: i-lucide-file-text
+icon: i-lucide-files
 studio:
   filters: []
-  story: false
+  story: true

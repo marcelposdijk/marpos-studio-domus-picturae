@@ -20,6 +20,12 @@ assert.equal(media.media.directory, "images/library");
 assert.ok(media.media.maxBytes > 0 && media.media.maxBytes <= 10485760);
 assert.ok(media.media.formats.includes("webp"));
 assert.ok(photos.length >= 77);
+assert.equal(yaml("content/.navigation.yml").studio.libraries.videos, "videos");
+const videos = records("videos");
+assert.ok(videos.length > 0);
+assert.equal(yaml("content/videos/.navigation.yml").studio.media.kind, "video");
+for (const video of videos)
+  assert.match(video.data.youtubeId, /^[A-Za-z0-9_-]{11}$/);
 const imagePaths = new Set();
 const checkImage = (url) => {
   assert.match(url, /^\/images\/.+\.(jpe?g|png|webp|gif|avif)$/i);
@@ -63,7 +69,7 @@ const visit = (v) => {
     assert.ok(librarySources.has(v), `Missing library record for ${v}`);
   } else if (v && typeof v === "object") Object.values(v).forEach(visit);
 };
-for (const group of groups.filter((g) => g !== "photos")) {
+for (const group of groups.filter((g) => !["photos", "videos"].includes(g))) {
   for (const record of records(group)) {
     visit(record.data);
     const expected = locales.map((locale) =>
@@ -89,7 +95,7 @@ for (const group of bodyGroups) {
     assert.ok(!seen.has(key), `Duplicate story ${key}`);
     seen.add(key);
     const expected = route(group, story.data.entry, {}, story.data.locale);
-    assert.equal(preview[story.path], expected);
+    assert.ok(preview[story.path].includes(expected));
     assertRoute(expected, story.data.locale);
     // Compare rendered prose after Markdown/HTML formatting, not source punctuation.
     const { marked } = await import("marked");
@@ -120,5 +126,5 @@ for (const featured of records("homepage")[0].data.collection) {
   assert.notEqual(artworks.get(featured.artwork).availability, "not-for-sale");
 }
 console.log(
-  `Verified ${photos.length} image records, ${storyCount} linked locale stories, ${routesChecked} route mappings and ${assets.size} rendered image/asset URLs.`,
+  `Verified ${photos.length} image records, ${storyCount} consolidated locale stories, ${routesChecked} route mappings and ${assets.size} rendered image/asset URLs.`,
 );

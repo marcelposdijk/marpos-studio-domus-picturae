@@ -94,7 +94,7 @@ export const collections = {
 
   news: collection({
     label: "News",
-    layout: "directory",
+    layout: "markdown",
     fields: {
       slug: field.slug(),
       title: field.text("Title", { required: true }),
@@ -112,7 +112,7 @@ export const collections = {
 
   exhibitions: collection({
     label: "Exhibitions",
-    layout: "directory",
+    layout: "markdown",
     fields: {
       slug: field.slug(),
       title: field.text("Title", { required: true }),
@@ -140,14 +140,15 @@ export const collections = {
 
   workshops: collection({
     label: "Workshops",
-    layout: "directory",
+    layout: "markdown",
     fields: {
       slug: field.slug(),
       title: field.text("Title", { required: true }),
       image: field.image("Image", "workshops"),
       imageAlt: imageAlt(),
-      video: field.plain("Preview video", {
-        description: "Path to an MP4 in public/, played on hover",
+      previewClip: field.plain("Hover preview clip (MP4)", {
+        description:
+          "Local MP4 path under public/, played on workshop-card hover. Use the Videos library to insert YouTube videos in article text.",
       }),
       registerTitle: field.text("Registration title"),
       registerInfo: field.text("Registration info", { multiline: true }),
@@ -157,7 +158,7 @@ export const collections = {
 
   pages: collection({
     label: "Pages",
-    layout: "directory",
+    layout: "markdown",
     fields: {
       slug: field.slug(),
       title: field.text("Title", { required: true }),

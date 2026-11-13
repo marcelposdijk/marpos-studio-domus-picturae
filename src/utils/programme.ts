@@ -169,7 +169,7 @@ export function presentWorkshop(
     title,
     registerTitle: text(data.registerTitle, locale),
     registerInfo: text(data.registerInfo, locale),
-    video: data.video || null,
+    video: data.previewClip || null,
     image: picture(data, locale, title),
   };
 }

@@ -6,6 +6,7 @@
  * resolves to Astro's typed reference.
  */
 import { z } from "astro/zod";
+import { storyBlocks } from "../utils/localized-story.mjs";
 import type { CollectionKey, reference as astroReference } from "astro:content";
 import { defaultLocale, locales, type Locale } from "@/i18n/config";
 import type {
@@ -94,8 +95,14 @@ function localized(required: boolean) {
       locales.map((l) => [
         l,
         l === defaultLocale && required
-          ? z.string().min(1)
-          : z.string().optional(),
+          ? z.string().min(1).meta({ title: "English" })
+          : z
+              .string()
+              .optional()
+              .meta({
+                title:
+                  l === "en" ? "English" : l === "fr" ? "Français" : "Deutsch",
+              }),
       ]),
     ),
   );
@@ -153,7 +160,17 @@ function shapeSchema<S extends Shape>(
   deps: ZodDeps,
 ): z.ZodObject<ZodShape<S>> {
   const entries = Object.entries(shape)
-    .map(([key, field]) => [key, fieldSchema(field, deps)] as const)
+    .map(([key, field]) => {
+      const schema = fieldSchema(field, deps);
+      return [
+        key,
+        schema?.meta({
+          ...schema.meta(),
+          title: field.label,
+          ...(field.description ? { description: field.description } : {}),
+        }) ?? null,
+      ] as const;
+    })
     .filter(
       (entry): entry is readonly [string, z.ZodTypeAny] => entry[1] !== null,
     );
@@ -167,7 +184,27 @@ export function schemaFor<S extends Shape>(
   descriptor: CollectionDescriptor<S> | SingletonDescriptor<S>,
   deps: ZodDeps,
 ): z.ZodObject<ZodShape<S>> {
-  return shapeSchema(descriptor.fields, deps);
+  const schema = shapeSchema(descriptor.fields, deps);
+  if (Object.values(descriptor.fields).some((field) => field.kind === "body")) {
+    return schema.extend({
+      studio: z
+        .object({
+          blocks: z.array(
+            z.object({
+              id: z.string(),
+              label: z.string(),
+              icon: z.string().optional(),
+              type: z.literal("markdown"),
+              component: z.string(),
+              slot: z.string(),
+              locale: z.string().optional(),
+            }),
+          ),
+        })
+        .default({ blocks: storyBlocks }),
+    }) as unknown as z.ZodObject<ZodShape<S>>;
+  }
+  return schema;
 }
 
 /** Glob pattern (relative to `content/<name>`) matching a collection's entry files. */
@@ -175,5 +212,5 @@ export function entryPattern(
   descriptor: CollectionDescriptor | SingletonDescriptor,
 ): string {
   if (!("layout" in descriptor)) return "index.json";
-  return "*.json";
+  return descriptor.layout === "markdown" ? "*.md" : "*.json";
 }

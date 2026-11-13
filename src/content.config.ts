@@ -6,6 +6,8 @@ import type {
   Shape,
   SingletonDescriptor,
 } from "./content-model/fields";
+import { defaultLocale } from "./i18n/config";
+import { storyTemplate } from "./utils/localized-story.mjs";
 import { entryPattern, schemaFor } from "./content-model/zod";
 
 /**
@@ -22,17 +24,21 @@ function define<S extends Shape>(
   name: string,
   descriptor: CollectionDescriptor<S> | SingletonDescriptor<S>,
 ) {
-  return defineCollection({
+  const options = {
     loader: glob({
       pattern: entryPattern(descriptor),
       base: `./content/${name}`,
     }),
     schema: schemaFor(descriptor, deps),
-  });
+    studio:
+      "layout" in descriptor && descriptor.layout === "markdown"
+        ? { bodyTemplate: storyTemplate, defaultLocale }
+        : {},
+  };
+  return defineCollection(options);
 }
 
 export const collections = {
-  ...studioCollections(),
   artists: define("artists", model.artists),
   artworks: define("artworks", model.artworks),
   news: define("news", model.news),
@@ -42,4 +48,5 @@ export const collections = {
   homepage: define("homepage", singletons.homepage),
   about: define("about", singletons.about),
   site: define("site", singletons.site),
+  ...studioCollections(),
 };

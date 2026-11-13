@@ -1,27 +1,25 @@
 # Five-minute gallery demo
 
-1. Install dependencies, then open this folder with **Open local repository** in Marpos Studio. The separate fork is `marcelposdijk/marpos-studio-domus-picturae`.
-2. Open **Artworks → the-blue-interval**. Edit `title.en`, `title.fr` or `title.de`, and the corresponding medium/description/alt text. These are per-field translations in one record, not three independent artworks. Artist, dimensions, image and availability are shared. Use the Artist reference picker to see real local artists.
-3. Preview the artwork's English, French and German addresses. Change Availability to see catalogue/private-collection behaviour; if it moves sections, refresh the mapping with `pnpm studio:previews` and reopen Studio's preview.
-4. Open **News stories**, filter `locale` to `fr`, and edit a story. The parent `entry` picker links to the News record; `locale` selects the rendered language. Edit prose in the visual or source editor. English is the fallback for a missing/blank translation. News, Exhibitions, Workshops and Pages all use this pattern.
-5. Open **Photos**. Confirm the thumbnail grid, search and Category/Visibility filters. The library starts with 77 entries. Choose **Upload image**, set a title and alt text, and save. Files go to `public/images/library/`; records go to `content/photos/`. Unsaved file selection alone does not upload.
-6. Return to an artwork, artist, homepage image or programme image. Its image control opens the same Photos chooser. Choose the uploaded image, save and preview. Localised alt text remains on the consuming record; the library also carries general alt text. Story image insertion uses the same library. Cropping a library image creates a new URL; choose that new URL on existing records when replacing their image.
-7. Open Homepage, About and Site for shared site details and localised copy. Saves write to this local Git checkout; use Git to commit/push. Selecting the GitHub fork instead uses Studio's normal draft/review/publish workflow after its setup.
+Open this repository with **Open local repository** in the current Marpos Studio development app.
 
-## Add content
+1. Open **News** and select the gallery opening article. The list contains seven articles, not 21 separate translation records. Details holds the shared image, date and translated titles/descriptions.
+2. Switch between **English**, **Français** and **Deutsch** to edit the article’s full text visually or as Markdown. All tabs belong to the same document and save together. A blank translation falls back to English on the website. When preview is open, switching language tabs selects the corresponding declared page.
+3. Try the same workflow in **Exhibitions**, **Workshops** and **Pages**. Creating content prepares all three language tabs automatically. Workshop **Hover preview clip (MP4)** is a separate local path for the original card animation.
+4. Open **Artworks**. Translated titles, descriptions and alt text have full language labels. Artist, availability, image and dimensions are shared. The list and editor show a readable title and artwork thumbnail. Artist and featured-artwork fields use real reference pickers.
+5. Open **Photos** to browse the 77-image grid, search, or filter by category/visibility. Upload an image, add its title/alt text and save. Files go to `public/images/library`; records go to `content/photos`. Image controls and story image insertion use this same library.
+6. Open **Videos**. The initial entry is the National Gallery teaser already linked by the upstream template. Add a YouTube link or ID, title, categories and optional thumbnail selected from Photos. Without a custom thumbnail, Studio displays YouTube’s thumbnail. Save, then use **Choose video** in a story editor to insert it. Videos are linked YouTube records, not MP4 uploads. The configured thumbnail upload destination is `public/images/video-thumbnails`.
+7. Open **Homepage**, **About the gallery** and **Gallery settings** for site-wide content. Distinct icons distinguish catalogue, programme, pages, settings and media collections.
 
-Create a catalogue/programme/page record in its normal collection, fill required fields and choose related artists/images. Titles and other localisable fields are nested by `en`, `fr`, `de`; required English values must be nonempty. For a long body, create a matching story in the corresponding Stories collection, select its parent `entry` and `locale`, and write Markdown. Use one story per parent and locale. Story filenames do not need to match the parent.
+## Adding and previewing content
 
-Run `pnpm studio:previews` after creating or renaming entries/stories to regenerate source preview mappings, then refresh local content. A new story can also use **Set preview page** immediately. New catalogue/programme entries get their normal dynamic detail routes. New plain pages get `/slug`, `/fr/slug`, `/de/slug`; use a unique address that does not collide with existing routes, and add navigation links separately when wanted. Renaming the built-in terms/privacy pages requires updating their fixed route files.
+Fill the required English details, select shared images/relations, then continue to the language tabs. Start with English and add French/German when ready. There are no parent-entry links or separate Stories records to manage.
 
-The `/template` developer page remains English-only, as upstream intended. Shared JSON records preview in all three locales; Studio's language menu is not used because these records store all translations together. Stories have an explicit Locale filter.
+Existing entries have all three preview addresses in `studio.preview.json`. For a new entry, use **Set preview page** or regenerate mappings with `pnpm studio:previews` and refresh local content. Moving an artwork between the catalogue and private collection also needs refreshed mappings. New plain pages get `/slug`, `/fr/slug`, `/de/slug`; add navigation links separately if wanted.
 
-## Verification and status
+An item used on several pages has a shared identifier; Studio explains why its existing slug is read-only. Display titles can be edited freely. Developer identifier changes must preserve incoming references and regenerate preview mappings.
 
-`pnpm check`, `pnpm test`, `pnpm build`, `pnpm format:check`, `pnpm verify:demo` and the optional real Studio integration check are the reproducible checks. The integration check validates collection/library discovery, parent and artist pickers, native validation, creation, a real upload destination and a save/reopen round trip on temporary content.
+All saves write to this separate local checkout. GitHub source hosting is separate from website deployment. **This fork is not deployed.**
 
-The fork is prepared for local demonstration and pushed to GitHub. **It is not deployed.** The canonical origin is a reserved placeholder until `SITE_URL` is configured. Forms stay in demo mode without service configuration.
+## Verification
 
-## Current Studio presentation limits
-
-Shared JSON titles may appear as a translation object in the editor heading while the nested locale inputs work normally. Collection cards can show the content address; use the preview destination menu for the mapped English/French/German page, especially private-collection artworks. Existing records with multiple mapped routes may keep the Slug control read-only. Identifier changes for those records require developer changes and regenerated preview mappings. These are desktop presentation limits; no unrelated Studio source was changed for this demonstration.
+Run the README’s checks. `verify:demo` checks both libraries, all translated body slots, real rendered routes and images. `verify:studio` edits French text while proving English/German remain intact, creates all six entity types, uploads a photo, creates/selects a video and verifies a rendered French video embed on a temporary site copy.

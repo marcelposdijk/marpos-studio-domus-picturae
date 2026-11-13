@@ -145,6 +145,16 @@ describe("presentExhibition", () => {
 });
 
 describe("presentWorkshop", () => {
+  it("keeps the existing local MP4 hover clip separate from the YouTube library", () => {
+    expect(
+      presentWorkshop(
+        fixtures.workshop("painting", {
+          previewClip: "/images/videos/video1.mp4",
+        }),
+        "en",
+      ).video,
+    ).toBe("/images/videos/video1.mp4");
+  });
   it("resolves the href and leaves the video out when there is none", () => {
     expect(presentWorkshop(fixtures.workshop("painting"), "de")).toMatchObject({
       href: "/de/workshops/painting",

@@ -1,3 +1,5 @@
+import { readLocalizedStory } from "./localized-story.mjs";
+import { locales } from "../i18n/config";
 import { getCollection, getEntry } from "astro:content";
 import type { Locale } from "@/i18n/config";
 import { presentArtistListing, type Artist } from "./artists";
@@ -166,23 +168,12 @@ export async function renderBody(
   locale: Locale,
   options?: { splitClosing?: boolean },
 ): Promise<RenderedBody> {
-  const names = {
-    news: "newsStories",
-    exhibitions: "exhibitionsStories",
-    workshops: "workshopsStories",
-    pages: "pagesStories",
-  } as const;
-  const entries = await getCollection(names[collection]);
+  const entry = await getEntry(collection, id);
+  if (!entry) throw new Error(`Missing ${collection}/${id}`);
+  const translations = readLocalizedStory(entry.body ?? "");
   const sources: BodySources = {};
-  for (const story of entries) {
-    if (story.data.entry.id !== id) continue;
-    const path = bodyPath(collection, id, story.data.locale);
-    if (path in sources)
-      throw new Error(
-        `Duplicate story for ${collection}/${id}/${story.data.locale}`,
-      );
-    sources[path] = story.body ?? "";
-  }
+  for (const language of locales)
+    sources[bodyPath(collection, id, language)] = translations[language];
   return renderBodyFrom(sources, collection, id, locale, options);
 }
 

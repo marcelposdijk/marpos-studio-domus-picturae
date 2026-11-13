@@ -27,13 +27,16 @@ describe("schemaFor", () => {
       note: { en: "" },
     });
     expect(() => schema.parse({ title: { en: "a" } })).toThrow();
+    expect(schema.shape.note.shape.en.meta()?.title).toBe("English");
+    expect(schema.shape.note.shape.fr.meta()?.title).toBe("Français");
+    expect(schema.shape.note.shape.de.meta()?.title).toBe("Deutsch");
   });
 
   it("omits slug and body fields, which live in the file layout", () => {
     const schema = schemaFor(
       collection({
         label: "x",
-        layout: "directory",
+        layout: "markdown",
         fields: {
           slug: field.slug(),
           body: field.body(),
@@ -42,7 +45,7 @@ describe("schemaFor", () => {
       }),
       deps,
     );
-    expect(Object.keys(schema.shape)).toEqual(["title"]);
+    expect(Object.keys(schema.shape)).toEqual(["title", "studio"]);
   });
 
   it("applies defaults for checkbox, select, number and array", () => {
@@ -97,8 +100,8 @@ describe("entryPattern", () => {
       entryPattern(collection({ label: "x", layout: "file", fields: {} })),
     ).toBe("*.json");
     expect(
-      entryPattern(collection({ label: "x", layout: "directory", fields: {} })),
-    ).toBe("*.json");
+      entryPattern(collection({ label: "x", layout: "markdown", fields: {} })),
+    ).toBe("*.md");
     expect(entryPattern(singleton({ label: "x", fields: {} }))).toBe(
       "index.json",
     );

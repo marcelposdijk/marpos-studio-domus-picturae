@@ -1,0 +1,12 @@
+title: Videos
+icon: i-lucide-clapperboard
+studio:
+  view: media
+  previewUrl: /
+  filters: [categories, visible]
+  media:
+    kind: video
+    directory: images/video-thumbnails
+    formats: [jpg, jpeg, png, webp]
+    maxBytes: 10485760
+    thumbnailAspectRatio: "16:9"

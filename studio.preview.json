@@ -134,77 +134,77 @@
     "/fr/artworks/whispering-pines",
     "/de/artworks/whispering-pines"
   ],
-  "content/news/autumn-art-fair-2025-participation.json": [
+  "content/news/autumn-art-fair-2025-participation.md": [
     "/news/autumn-art-fair-2025-participation",
     "/fr/news/autumn-art-fair-2025-participation",
     "/de/news/autumn-art-fair-2025-participation"
   ],
-  "content/news/domus-picturae-grand-opening.json": [
+  "content/news/domus-picturae-grand-opening.md": [
     "/news/domus-picturae-grand-opening",
     "/fr/news/domus-picturae-grand-opening",
     "/de/news/domus-picturae-grand-opening"
   ],
-  "content/news/emma-thompson-solo-exhibition.json": [
+  "content/news/emma-thompson-solo-exhibition.md": [
     "/news/emma-thompson-solo-exhibition",
     "/fr/news/emma-thompson-solo-exhibition",
     "/de/news/emma-thompson-solo-exhibition"
   ],
-  "content/news/james-park-sculptural-installation.json": [
+  "content/news/james-park-sculptural-installation.md": [
     "/news/james-park-sculptural-installation",
     "/fr/news/james-park-sculptural-installation",
     "/de/news/james-park-sculptural-installation"
   ],
-  "content/news/masterclass-contemporary-painting.json": [
+  "content/news/masterclass-contemporary-painting.md": [
     "/news/masterclass-contemporary-painting",
     "/fr/news/masterclass-contemporary-painting",
     "/de/news/masterclass-contemporary-painting"
   ],
-  "content/news/sophie-laurent-portrait-series.json": [
+  "content/news/sophie-laurent-portrait-series.md": [
     "/news/sophie-laurent-portrait-series",
     "/fr/news/sophie-laurent-portrait-series",
     "/de/news/sophie-laurent-portrait-series"
   ],
-  "content/news/yuki-tanaka-digital-traditional.json": [
+  "content/news/yuki-tanaka-digital-traditional.md": [
     "/news/yuki-tanaka-digital-traditional",
     "/fr/news/yuki-tanaka-digital-traditional",
     "/de/news/yuki-tanaka-digital-traditional"
   ],
-  "content/exhibitions/echoes-of-stillness.json": [
+  "content/exhibitions/echoes-of-stillness.md": [
     "/exhibitions/echoes-of-stillness",
     "/fr/exhibitions/echoes-of-stillness",
     "/de/exhibitions/echoes-of-stillness"
   ],
-  "content/exhibitions/luminous-ground.json": [
+  "content/exhibitions/luminous-ground.md": [
     "/exhibitions/luminous-ground",
     "/fr/exhibitions/luminous-ground",
     "/de/exhibitions/luminous-ground"
   ],
-  "content/exhibitions/thresholds-of-perception.json": [
+  "content/exhibitions/thresholds-of-perception.md": [
     "/exhibitions/thresholds-of-perception",
     "/fr/exhibitions/thresholds-of-perception",
     "/de/exhibitions/thresholds-of-perception"
   ],
-  "content/workshops/contemporary-painting-techniques.json": [
+  "content/workshops/contemporary-painting-techniques.md": [
     "/workshops/contemporary-painting-techniques",
     "/fr/workshops/contemporary-painting-techniques",
     "/de/workshops/contemporary-painting-techniques"
   ],
-  "content/workshops/digital-art-and-traditional-media.json": [
+  "content/workshops/digital-art-and-traditional-media.md": [
     "/workshops/digital-art-and-traditional-media",
     "/fr/workshops/digital-art-and-traditional-media",
     "/de/workshops/digital-art-and-traditional-media"
   ],
-  "content/workshops/exploring-abstract-art-a-hands-on-workshop.json": [
+  "content/workshops/exploring-abstract-art-a-hands-on-workshop.md": [
     "/workshops/exploring-abstract-art-a-hands-on-workshop",
     "/fr/workshops/exploring-abstract-art-a-hands-on-workshop",
     "/de/workshops/exploring-abstract-art-a-hands-on-workshop"
   ],
-  "content/pages/privacy-policy.json": [
+  "content/pages/privacy-policy.md": [
     "/privacy-policy",
     "/fr/privacy-policy",
     "/de/privacy-policy"
   ],
-  "content/pages/terms.json": ["/terms", "/fr/terms", "/de/terms"],
+  "content/pages/terms.md": ["/terms", "/fr/terms", "/de/terms"],
   "content/homepage/index.json": ["/", "/fr", "/de"],
   "content/about/index.json": ["/about", "/fr/about", "/de/about"],
   "content/site/index.json": ["/", "/fr", "/de"],
@@ -285,49 +285,5 @@
   "content/photos/078-workshops-contemporary-painting-techniques-image.json": "/",
   "content/photos/079-workshops-digital-art-and-traditional-media-image.json": "/",
   "content/photos/080-workshops-exploring-abstract-art-a-hands-on-workshop-image.json": "/",
-  "content/news-stories/autumn-art-fair-2025-participation.de.md": "/de/news/autumn-art-fair-2025-participation",
-  "content/news-stories/autumn-art-fair-2025-participation.en.md": "/news/autumn-art-fair-2025-participation",
-  "content/news-stories/autumn-art-fair-2025-participation.fr.md": "/fr/news/autumn-art-fair-2025-participation",
-  "content/news-stories/domus-picturae-grand-opening.de.md": "/de/news/domus-picturae-grand-opening",
-  "content/news-stories/domus-picturae-grand-opening.en.md": "/news/domus-picturae-grand-opening",
-  "content/news-stories/domus-picturae-grand-opening.fr.md": "/fr/news/domus-picturae-grand-opening",
-  "content/news-stories/emma-thompson-solo-exhibition.de.md": "/de/news/emma-thompson-solo-exhibition",
-  "content/news-stories/emma-thompson-solo-exhibition.en.md": "/news/emma-thompson-solo-exhibition",
-  "content/news-stories/emma-thompson-solo-exhibition.fr.md": "/fr/news/emma-thompson-solo-exhibition",
-  "content/news-stories/james-park-sculptural-installation.de.md": "/de/news/james-park-sculptural-installation",
-  "content/news-stories/james-park-sculptural-installation.en.md": "/news/james-park-sculptural-installation",
-  "content/news-stories/james-park-sculptural-installation.fr.md": "/fr/news/james-park-sculptural-installation",
-  "content/news-stories/masterclass-contemporary-painting.de.md": "/de/news/masterclass-contemporary-painting",
-  "content/news-stories/masterclass-contemporary-painting.en.md": "/news/masterclass-contemporary-painting",
-  "content/news-stories/masterclass-contemporary-painting.fr.md": "/fr/news/masterclass-contemporary-painting",
-  "content/news-stories/sophie-laurent-portrait-series.de.md": "/de/news/sophie-laurent-portrait-series",
-  "content/news-stories/sophie-laurent-portrait-series.en.md": "/news/sophie-laurent-portrait-series",
-  "content/news-stories/sophie-laurent-portrait-series.fr.md": "/fr/news/sophie-laurent-portrait-series",
-  "content/news-stories/yuki-tanaka-digital-traditional.de.md": "/de/news/yuki-tanaka-digital-traditional",
-  "content/news-stories/yuki-tanaka-digital-traditional.en.md": "/news/yuki-tanaka-digital-traditional",
-  "content/news-stories/yuki-tanaka-digital-traditional.fr.md": "/fr/news/yuki-tanaka-digital-traditional",
-  "content/exhibitions-stories/echoes-of-stillness.de.md": "/de/exhibitions/echoes-of-stillness",
-  "content/exhibitions-stories/echoes-of-stillness.en.md": "/exhibitions/echoes-of-stillness",
-  "content/exhibitions-stories/echoes-of-stillness.fr.md": "/fr/exhibitions/echoes-of-stillness",
-  "content/exhibitions-stories/luminous-ground.de.md": "/de/exhibitions/luminous-ground",
-  "content/exhibitions-stories/luminous-ground.en.md": "/exhibitions/luminous-ground",
-  "content/exhibitions-stories/luminous-ground.fr.md": "/fr/exhibitions/luminous-ground",
-  "content/exhibitions-stories/thresholds-of-perception.de.md": "/de/exhibitions/thresholds-of-perception",
-  "content/exhibitions-stories/thresholds-of-perception.en.md": "/exhibitions/thresholds-of-perception",
-  "content/exhibitions-stories/thresholds-of-perception.fr.md": "/fr/exhibitions/thresholds-of-perception",
-  "content/workshops-stories/contemporary-painting-techniques.de.md": "/de/workshops/contemporary-painting-techniques",
-  "content/workshops-stories/contemporary-painting-techniques.en.md": "/workshops/contemporary-painting-techniques",
-  "content/workshops-stories/contemporary-painting-techniques.fr.md": "/fr/workshops/contemporary-painting-techniques",
-  "content/workshops-stories/digital-art-and-traditional-media.de.md": "/de/workshops/digital-art-and-traditional-media",
-  "content/workshops-stories/digital-art-and-traditional-media.en.md": "/workshops/digital-art-and-traditional-media",
-  "content/workshops-stories/digital-art-and-traditional-media.fr.md": "/fr/workshops/digital-art-and-traditional-media",
-  "content/workshops-stories/exploring-abstract-art-a-hands-on-workshop.de.md": "/de/workshops/exploring-abstract-art-a-hands-on-workshop",
-  "content/workshops-stories/exploring-abstract-art-a-hands-on-workshop.en.md": "/workshops/exploring-abstract-art-a-hands-on-workshop",
-  "content/workshops-stories/exploring-abstract-art-a-hands-on-workshop.fr.md": "/fr/workshops/exploring-abstract-art-a-hands-on-workshop",
-  "content/pages-stories/privacy-policy.de.md": "/de/privacy-policy",
-  "content/pages-stories/privacy-policy.en.md": "/privacy-policy",
-  "content/pages-stories/privacy-policy.fr.md": "/fr/privacy-policy",
-  "content/pages-stories/terms.de.md": "/de/terms",
-  "content/pages-stories/terms.en.md": "/terms",
-  "content/pages-stories/terms.fr.md": "/fr/terms"
+  "content/videos/gallery-showreel.json": "/"
 }
