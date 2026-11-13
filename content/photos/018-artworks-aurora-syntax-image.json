@@ -1,0 +1,11 @@
+{
+  "title": "Digital abstraction inspired by northern lights",
+  "image": {
+    "src": "/images/artworks/aurora-syntax/image.jpg",
+    "alt": "Digital abstraction inspired by northern lights"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 73
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Artwork 7",
+  "image": {
+    "src": "/images/homepage/about/galleryItems/6/image.jpg",
+    "alt": "Artwork 7"
+  },
+  "categories": ["homepage"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 12
+}

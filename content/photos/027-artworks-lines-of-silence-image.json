@@ -1,0 +1,11 @@
+{
+  "title": "Minimal horizontal lines in shades of grey",
+  "image": {
+    "src": "/images/artworks/lines-of-silence/image.jpg",
+    "alt": "Minimal horizontal lines in shades of grey"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 69
+}

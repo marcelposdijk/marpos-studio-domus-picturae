@@ -1,0 +1,6 @@
+---
+import PageView from "@/views/PageView.astro";
+export { pagePaths as getStaticPaths } from "@/utils/content";
+---
+
+<PageView locale="en" page={Astro.props.page} />

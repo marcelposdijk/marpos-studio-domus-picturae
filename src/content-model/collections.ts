@@ -2,7 +2,7 @@
  * The content model: every collection and singleton, described once.
  *
  * `src/content.config.ts` derives Astro's schemas from this file and
- * `keystatic.config.ts` derives the admin UI, so adding a field is a one-line
+ * Marpos Studio reads those native schemas, so adding a field is a one-line
  * change here. Text fields are localised (one value per locale) unless
  * declared with `field.plain`; images, dates, numbers and slugs are shared.
  * See docs/content.md.

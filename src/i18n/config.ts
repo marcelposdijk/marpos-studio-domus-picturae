@@ -2,7 +2,7 @@
  * Locale configuration.
  *
  * This is the single source of truth for which languages the site is published
- * in. `astro.config.mjs`, the content schemas, the Keystatic admin and every
+ * in. `astro.config.mjs`, the content schemas, Marpos Studio and every
  * component read from here. To add a locale: add it to `locales`, give it a
  * label and a language tag, add its UI strings in `ui.ts`, then add a
  * `src/pages/<locale>/` route folder (see docs/i18n.md).

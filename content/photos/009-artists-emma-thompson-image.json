@@ -1,0 +1,11 @@
+{
+  "title": "Portrait of Emma Thompson",
+  "image": {
+    "src": "/images/artists/emma-thompson/image.jpg",
+    "alt": "Portrait of Emma Thompson"
+  },
+  "categories": ["artists"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 56
+}

@@ -1,0 +1,11 @@
+{
+  "title": "A black and white photo of a museum building",
+  "image": {
+    "src": "/images/news/autumn-art-fair-2025-participation/slides/2/image.jpg",
+    "alt": "A black and white photo of a museum building"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 30
+}

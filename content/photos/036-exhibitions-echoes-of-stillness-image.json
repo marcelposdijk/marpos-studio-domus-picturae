@@ -1,0 +1,11 @@
+{
+  "title": "Abstract landscape with a golden horizon",
+  "image": {
+    "src": "/images/exhibitions/echoes-of-stillness/image.jpg",
+    "alt": "Abstract landscape with a golden horizon"
+  },
+  "categories": ["exhibitions"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 17
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Minimalist soundwave-inspired drawing",
+  "image": {
+    "src": "/images/artworks/between-echoes/image.jpg",
+    "alt": "Minimalist soundwave-inspired drawing"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 77
+}

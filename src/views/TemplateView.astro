@@ -72,8 +72,8 @@ const features = [
     body: "Builds to plain HTML with no server; React hydrates only the two forms. Deploy anywhere that serves files.",
   },
   {
-    title: "Keystatic CMS",
-    body: "An editing admin at /keystatic during development, writing straight to the files in the repo. Add an SSR adapter and GitHub storage to edit online.",
+    title: "Marpos Studio CMS",
+    body: "A desktop content workspace for structured multilingual fields, Markdown stories and a public image library. Open this repository in Marpos Studio.",
   },
   {
     title: "English, French and German",
@@ -81,7 +81,7 @@ const features = [
   },
   {
     title: "One typed content model",
-    body: "Collections are declared once and generate both the Astro content schemas and the Keystatic admin, so they cannot drift apart.",
+    body: "Collections are declared once; native Astro schemas expose fields and references to Marpos Studio. Stories link to their parent entry and locale.",
   },
   {
     title: "SEO built in",
@@ -140,7 +140,7 @@ const meta = templateMeta(
   "Astro template for art galleries",
   {
     name: NAME,
-    description: `${NAME} is a free, open-source Astro 7 and Keystatic template for contemporary art galleries: artists, artworks, exhibitions, workshops and news in English, French and German.`,
+    description: `${NAME} is a free, open-source Astro 7 and Marpos Studio template for contemporary art galleries: artists, artworks, exhibitions, workshops and news in English, French and German.`,
     version: pkg.version,
     repositoryHref: REPOSITORY,
     imageSrc: cover.src,
@@ -157,7 +157,7 @@ const meta = templateMeta(
       <h1 class="template-title">{NAME}</h1>
       <p class="template-lead">
         A multilingual website template for contemporary art galleries, built
-        with Astro 7 and Keystatic. The site you are browsing is the demo.
+        with Astro 7 and Marpos Studio. The site you are browsing is the demo.
       </p>
       <div class="template-actions">
         {actions.map((action) => (
@@ -237,7 +237,7 @@ const meta = templateMeta(
       </h2>
       <pre class="template-code"><code>{quickStart}</code></pre>
       <p class="template-note">
-        Open <code>localhost:4321/keystatic</code> to edit content. Before you
+        Open this repository in Marpos Studio to edit content. Before you
         publish, replace the demo artworks, images and gallery details with your
         own. The README on GitHub covers deployment, forms and adding a Locale.
       </p>

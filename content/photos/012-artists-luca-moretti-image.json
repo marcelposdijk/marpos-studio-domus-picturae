@@ -1,0 +1,11 @@
+{
+  "title": "Portrait of Luca Moretti",
+  "image": {
+    "src": "/images/artists/luca-moretti/image.jpg",
+    "alt": "Portrait of Luca Moretti"
+  },
+  "categories": ["artists"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 55
+}

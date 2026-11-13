@@ -1,0 +1,333 @@
+{
+  "content/artists/emma-thompson.json": [
+    "/artists/emma-thompson",
+    "/fr/artists/emma-thompson",
+    "/de/artists/emma-thompson"
+  ],
+  "content/artists/isabella-rodriguez.json": [
+    "/artists/isabella-rodriguez",
+    "/fr/artists/isabella-rodriguez",
+    "/de/artists/isabella-rodriguez"
+  ],
+  "content/artists/james-park.json": [
+    "/artists/james-park",
+    "/fr/artists/james-park",
+    "/de/artists/james-park"
+  ],
+  "content/artists/luca-moretti.json": [
+    "/artists/luca-moretti",
+    "/fr/artists/luca-moretti",
+    "/de/artists/luca-moretti"
+  ],
+  "content/artists/marcus-weber.json": [
+    "/artists/marcus-weber",
+    "/fr/artists/marcus-weber",
+    "/de/artists/marcus-weber"
+  ],
+  "content/artists/sarah-chen.json": [
+    "/artists/sarah-chen",
+    "/fr/artists/sarah-chen",
+    "/de/artists/sarah-chen"
+  ],
+  "content/artists/sophie-laurent.json": [
+    "/artists/sophie-laurent",
+    "/fr/artists/sophie-laurent",
+    "/de/artists/sophie-laurent"
+  ],
+  "content/artists/yuki-tanaka.json": [
+    "/artists/yuki-tanaka",
+    "/fr/artists/yuki-tanaka",
+    "/de/artists/yuki-tanaka"
+  ],
+  "content/artworks/alpine-echo-field.json": [
+    "/artworks/alpine-echo-field",
+    "/fr/artworks/alpine-echo-field",
+    "/de/artworks/alpine-echo-field"
+  ],
+  "content/artworks/aurora-syntax.json": [
+    "/artworks/aurora-syntax",
+    "/fr/artworks/aurora-syntax",
+    "/de/artworks/aurora-syntax"
+  ],
+  "content/artworks/between-echoes.json": [
+    "/private-collection/between-echoes",
+    "/fr/private-collection/between-echoes",
+    "/de/private-collection/between-echoes"
+  ],
+  "content/artworks/digital-bloom.json": [
+    "/artworks/digital-bloom",
+    "/fr/artworks/digital-bloom",
+    "/de/artworks/digital-bloom"
+  ],
+  "content/artworks/eternal-stillness.json": [
+    "/artworks/eternal-stillness",
+    "/fr/artworks/eternal-stillness",
+    "/de/artworks/eternal-stillness"
+  ],
+  "content/artworks/forest-of-breathing-lines.json": [
+    "/artworks/forest-of-breathing-lines",
+    "/fr/artworks/forest-of-breathing-lines",
+    "/de/artworks/forest-of-breathing-lines"
+  ],
+  "content/artworks/fragmented-city.json": [
+    "/private-collection/fragmented-city",
+    "/fr/private-collection/fragmented-city",
+    "/de/private-collection/fragmented-city"
+  ],
+  "content/artworks/golden-anatomy.json": [
+    "/private-collection/golden-anatomy",
+    "/fr/private-collection/golden-anatomy",
+    "/de/private-collection/golden-anatomy"
+  ],
+  "content/artworks/horizon-pulse.json": [
+    "/artworks/horizon-pulse",
+    "/fr/artworks/horizon-pulse",
+    "/de/artworks/horizon-pulse"
+  ],
+  "content/artworks/lighthouse-of-quiet-tides.json": [
+    "/artworks/lighthouse-of-quiet-tides",
+    "/fr/artworks/lighthouse-of-quiet-tides",
+    "/de/artworks/lighthouse-of-quiet-tides"
+  ],
+  "content/artworks/lines-of-silence.json": [
+    "/artworks/lines-of-silence",
+    "/fr/artworks/lines-of-silence",
+    "/de/artworks/lines-of-silence"
+  ],
+  "content/artworks/lunar-fragments.json": [
+    "/artworks/lunar-fragments",
+    "/fr/artworks/lunar-fragments",
+    "/de/artworks/lunar-fragments"
+  ],
+  "content/artworks/memory-of-water.json": [
+    "/private-collection/memory-of-water",
+    "/fr/private-collection/memory-of-water",
+    "/de/private-collection/memory-of-water"
+  ],
+  "content/artworks/reverie-in-red.json": [
+    "/private-collection/reverie-in-red",
+    "/fr/private-collection/reverie-in-red",
+    "/de/private-collection/reverie-in-red"
+  ],
+  "content/artworks/spectrum-of-thought.json": [
+    "/artworks/spectrum-of-thought",
+    "/fr/artworks/spectrum-of-thought",
+    "/de/artworks/spectrum-of-thought"
+  ],
+  "content/artworks/the-blue-interval.json": [
+    "/artworks/the-blue-interval",
+    "/fr/artworks/the-blue-interval",
+    "/de/artworks/the-blue-interval"
+  ],
+  "content/artworks/the-garden-within.json": [
+    "/artworks/the-garden-within",
+    "/fr/artworks/the-garden-within",
+    "/de/artworks/the-garden-within"
+  ],
+  "content/artworks/the-silent-horizon.json": [
+    "/private-collection/the-silent-horizon",
+    "/fr/private-collection/the-silent-horizon",
+    "/de/private-collection/the-silent-horizon"
+  ],
+  "content/artworks/whispering-pines.json": [
+    "/artworks/whispering-pines",
+    "/fr/artworks/whispering-pines",
+    "/de/artworks/whispering-pines"
+  ],
+  "content/news/autumn-art-fair-2025-participation.json": [
+    "/news/autumn-art-fair-2025-participation",
+    "/fr/news/autumn-art-fair-2025-participation",
+    "/de/news/autumn-art-fair-2025-participation"
+  ],
+  "content/news/domus-picturae-grand-opening.json": [
+    "/news/domus-picturae-grand-opening",
+    "/fr/news/domus-picturae-grand-opening",
+    "/de/news/domus-picturae-grand-opening"
+  ],
+  "content/news/emma-thompson-solo-exhibition.json": [
+    "/news/emma-thompson-solo-exhibition",
+    "/fr/news/emma-thompson-solo-exhibition",
+    "/de/news/emma-thompson-solo-exhibition"
+  ],
+  "content/news/james-park-sculptural-installation.json": [
+    "/news/james-park-sculptural-installation",
+    "/fr/news/james-park-sculptural-installation",
+    "/de/news/james-park-sculptural-installation"
+  ],
+  "content/news/masterclass-contemporary-painting.json": [
+    "/news/masterclass-contemporary-painting",
+    "/fr/news/masterclass-contemporary-painting",
+    "/de/news/masterclass-contemporary-painting"
+  ],
+  "content/news/sophie-laurent-portrait-series.json": [
+    "/news/sophie-laurent-portrait-series",
+    "/fr/news/sophie-laurent-portrait-series",
+    "/de/news/sophie-laurent-portrait-series"
+  ],
+  "content/news/yuki-tanaka-digital-traditional.json": [
+    "/news/yuki-tanaka-digital-traditional",
+    "/fr/news/yuki-tanaka-digital-traditional",
+    "/de/news/yuki-tanaka-digital-traditional"
+  ],
+  "content/exhibitions/echoes-of-stillness.json": [
+    "/exhibitions/echoes-of-stillness",
+    "/fr/exhibitions/echoes-of-stillness",
+    "/de/exhibitions/echoes-of-stillness"
+  ],
+  "content/exhibitions/luminous-ground.json": [
+    "/exhibitions/luminous-ground",
+    "/fr/exhibitions/luminous-ground",
+    "/de/exhibitions/luminous-ground"
+  ],
+  "content/exhibitions/thresholds-of-perception.json": [
+    "/exhibitions/thresholds-of-perception",
+    "/fr/exhibitions/thresholds-of-perception",
+    "/de/exhibitions/thresholds-of-perception"
+  ],
+  "content/workshops/contemporary-painting-techniques.json": [
+    "/workshops/contemporary-painting-techniques",
+    "/fr/workshops/contemporary-painting-techniques",
+    "/de/workshops/contemporary-painting-techniques"
+  ],
+  "content/workshops/digital-art-and-traditional-media.json": [
+    "/workshops/digital-art-and-traditional-media",
+    "/fr/workshops/digital-art-and-traditional-media",
+    "/de/workshops/digital-art-and-traditional-media"
+  ],
+  "content/workshops/exploring-abstract-art-a-hands-on-workshop.json": [
+    "/workshops/exploring-abstract-art-a-hands-on-workshop",
+    "/fr/workshops/exploring-abstract-art-a-hands-on-workshop",
+    "/de/workshops/exploring-abstract-art-a-hands-on-workshop"
+  ],
+  "content/pages/privacy-policy.json": [
+    "/privacy-policy",
+    "/fr/privacy-policy",
+    "/de/privacy-policy"
+  ],
+  "content/pages/terms.json": ["/terms", "/fr/terms", "/de/terms"],
+  "content/homepage/index.json": ["/", "/fr", "/de"],
+  "content/about/index.json": ["/about", "/fr/about", "/de/about"],
+  "content/site/index.json": ["/", "/fr", "/de"],
+  "content/photos/001-animatedImages-0-image.json": "/",
+  "content/photos/002-animatedImages-1-image.json": "/",
+  "content/photos/003-animatedImages-2-image.json": "/",
+  "content/photos/004-animatedImages-3-image.json": "/",
+  "content/photos/005-animatedImages-4-image.json": "/",
+  "content/photos/006-animatedImages-5-image.json": "/",
+  "content/photos/007-images-0-image.json": "/",
+  "content/photos/008-images-1-image.json": "/",
+  "content/photos/009-artists-emma-thompson-image.json": "/",
+  "content/photos/010-artists-isabella-rodriguez-image.json": "/",
+  "content/photos/011-artists-james-park-image.json": "/",
+  "content/photos/012-artists-luca-moretti-image.json": "/",
+  "content/photos/013-artists-marcus-weber-image.json": "/",
+  "content/photos/014-artists-sarah-chen-image.json": "/",
+  "content/photos/015-artists-sophie-laurent-image.json": "/",
+  "content/photos/016-artists-yuki-tanaka-image.json": "/",
+  "content/photos/017-artworks-alpine-echo-field-image.json": "/",
+  "content/photos/018-artworks-aurora-syntax-image.json": "/",
+  "content/photos/019-artworks-between-echoes-image.json": "/",
+  "content/photos/020-artworks-digital-bloom-image.json": "/",
+  "content/photos/021-artworks-eternal-stillness-image.json": "/",
+  "content/photos/022-artworks-forest-of-breathing-lines-image.json": "/",
+  "content/photos/023-artworks-fragmented-city-image.json": "/",
+  "content/photos/024-artworks-golden-anatomy-image.json": "/",
+  "content/photos/025-artworks-horizon-pulse-image.json": "/",
+  "content/photos/026-artworks-lighthouse-of-quiet-tides-image.json": "/",
+  "content/photos/027-artworks-lines-of-silence-image.json": "/",
+  "content/photos/028-artworks-lunar-fragments-image.json": "/",
+  "content/photos/029-artworks-memory-of-water-image.json": "/",
+  "content/photos/030-artworks-reverie-in-red-image.json": "/",
+  "content/photos/031-artworks-spectrum-of-thought-image.json": "/",
+  "content/photos/032-artworks-the-blue-interval-image.json": "/",
+  "content/photos/033-artworks-the-garden-within-image.json": "/",
+  "content/photos/034-artworks-the-silent-horizon-image.json": "/",
+  "content/photos/035-artworks-whispering-pines-image.json": "/",
+  "content/photos/036-exhibitions-echoes-of-stillness-image.json": "/",
+  "content/photos/037-exhibitions-luminous-ground-image.json": "/",
+  "content/photos/038-exhibitions-thresholds-of-perception-image.json": "/",
+  "content/photos/039-galleryItems-0-image.json": "/",
+  "content/photos/040-galleryItems-1-image.json": "/",
+  "content/photos/041-galleryItems-2-image.json": "/",
+  "content/photos/042-galleryItems-3-image.json": "/",
+  "content/photos/043-galleryItems-4-image.json": "/",
+  "content/photos/044-galleryItems-5-image.json": "/",
+  "content/photos/045-galleryItems-6-image.json": "/",
+  "content/photos/046-galleryItems-7-image.json": "/",
+  "content/photos/047-galleryItems-8-image.json": "/",
+  "content/photos/048-galleryItems-9-image.json": "/",
+  "content/photos/049-news-autumn-art-fair-2025-participation-featuredImage.json": "/",
+  "content/photos/050-slides-0-image.json": "/",
+  "content/photos/051-slides-1-image.json": "/",
+  "content/photos/052-slides-2-image.json": "/",
+  "content/photos/053-news-domus-picturae-grand-opening-featuredImage.json": "/",
+  "content/photos/054-slides-0-image.json": "/",
+  "content/photos/055-slides-1-image.json": "/",
+  "content/photos/056-slides-2-image.json": "/",
+  "content/photos/057-news-emma-thompson-solo-exhibition-featuredImage.json": "/",
+  "content/photos/058-slides-0-image.json": "/",
+  "content/photos/059-slides-1-image.json": "/",
+  "content/photos/060-slides-2-image.json": "/",
+  "content/photos/061-slides-3-image.json": "/",
+  "content/photos/062-slides-4-image.json": "/",
+  "content/photos/063-news-james-park-sculptural-installation-featuredImage.json": "/",
+  "content/photos/064-slides-0-image.json": "/",
+  "content/photos/065-slides-1-image.json": "/",
+  "content/photos/066-slides-2-image.json": "/",
+  "content/photos/067-news-masterclass-contemporary-painting-featuredImage.json": "/",
+  "content/photos/068-news-sophie-laurent-portrait-series-featuredImage.json": "/",
+  "content/photos/069-news-yuki-tanaka-digital-traditional-featuredImage.json": "/",
+  "content/photos/070-slides-0-image.json": "/",
+  "content/photos/071-slides-1-image.json": "/",
+  "content/photos/072-slides-2-image.json": "/",
+  "content/photos/073-slides-3-image.json": "/",
+  "content/photos/074-slides-4-image.json": "/",
+  "content/photos/078-workshops-contemporary-painting-techniques-image.json": "/",
+  "content/photos/079-workshops-digital-art-and-traditional-media-image.json": "/",
+  "content/photos/080-workshops-exploring-abstract-art-a-hands-on-workshop-image.json": "/",
+  "content/news-stories/autumn-art-fair-2025-participation.de.md": "/de/news/autumn-art-fair-2025-participation",
+  "content/news-stories/autumn-art-fair-2025-participation.en.md": "/news/autumn-art-fair-2025-participation",
+  "content/news-stories/autumn-art-fair-2025-participation.fr.md": "/fr/news/autumn-art-fair-2025-participation",
+  "content/news-stories/domus-picturae-grand-opening.de.md": "/de/news/domus-picturae-grand-opening",
+  "content/news-stories/domus-picturae-grand-opening.en.md": "/news/domus-picturae-grand-opening",
+  "content/news-stories/domus-picturae-grand-opening.fr.md": "/fr/news/domus-picturae-grand-opening",
+  "content/news-stories/emma-thompson-solo-exhibition.de.md": "/de/news/emma-thompson-solo-exhibition",
+  "content/news-stories/emma-thompson-solo-exhibition.en.md": "/news/emma-thompson-solo-exhibition",
+  "content/news-stories/emma-thompson-solo-exhibition.fr.md": "/fr/news/emma-thompson-solo-exhibition",
+  "content/news-stories/james-park-sculptural-installation.de.md": "/de/news/james-park-sculptural-installation",
+  "content/news-stories/james-park-sculptural-installation.en.md": "/news/james-park-sculptural-installation",
+  "content/news-stories/james-park-sculptural-installation.fr.md": "/fr/news/james-park-sculptural-installation",
+  "content/news-stories/masterclass-contemporary-painting.de.md": "/de/news/masterclass-contemporary-painting",
+  "content/news-stories/masterclass-contemporary-painting.en.md": "/news/masterclass-contemporary-painting",
+  "content/news-stories/masterclass-contemporary-painting.fr.md": "/fr/news/masterclass-contemporary-painting",
+  "content/news-stories/sophie-laurent-portrait-series.de.md": "/de/news/sophie-laurent-portrait-series",
+  "content/news-stories/sophie-laurent-portrait-series.en.md": "/news/sophie-laurent-portrait-series",
+  "content/news-stories/sophie-laurent-portrait-series.fr.md": "/fr/news/sophie-laurent-portrait-series",
+  "content/news-stories/yuki-tanaka-digital-traditional.de.md": "/de/news/yuki-tanaka-digital-traditional",
+  "content/news-stories/yuki-tanaka-digital-traditional.en.md": "/news/yuki-tanaka-digital-traditional",
+  "content/news-stories/yuki-tanaka-digital-traditional.fr.md": "/fr/news/yuki-tanaka-digital-traditional",
+  "content/exhibitions-stories/echoes-of-stillness.de.md": "/de/exhibitions/echoes-of-stillness",
+  "content/exhibitions-stories/echoes-of-stillness.en.md": "/exhibitions/echoes-of-stillness",
+  "content/exhibitions-stories/echoes-of-stillness.fr.md": "/fr/exhibitions/echoes-of-stillness",
+  "content/exhibitions-stories/luminous-ground.de.md": "/de/exhibitions/luminous-ground",
+  "content/exhibitions-stories/luminous-ground.en.md": "/exhibitions/luminous-ground",
+  "content/exhibitions-stories/luminous-ground.fr.md": "/fr/exhibitions/luminous-ground",
+  "content/exhibitions-stories/thresholds-of-perception.de.md": "/de/exhibitions/thresholds-of-perception",
+  "content/exhibitions-stories/thresholds-of-perception.en.md": "/exhibitions/thresholds-of-perception",
+  "content/exhibitions-stories/thresholds-of-perception.fr.md": "/fr/exhibitions/thresholds-of-perception",
+  "content/workshops-stories/contemporary-painting-techniques.de.md": "/de/workshops/contemporary-painting-techniques",
+  "content/workshops-stories/contemporary-painting-techniques.en.md": "/workshops/contemporary-painting-techniques",
+  "content/workshops-stories/contemporary-painting-techniques.fr.md": "/fr/workshops/contemporary-painting-techniques",
+  "content/workshops-stories/digital-art-and-traditional-media.de.md": "/de/workshops/digital-art-and-traditional-media",
+  "content/workshops-stories/digital-art-and-traditional-media.en.md": "/workshops/digital-art-and-traditional-media",
+  "content/workshops-stories/digital-art-and-traditional-media.fr.md": "/fr/workshops/digital-art-and-traditional-media",
+  "content/workshops-stories/exploring-abstract-art-a-hands-on-workshop.de.md": "/de/workshops/exploring-abstract-art-a-hands-on-workshop",
+  "content/workshops-stories/exploring-abstract-art-a-hands-on-workshop.en.md": "/workshops/exploring-abstract-art-a-hands-on-workshop",
+  "content/workshops-stories/exploring-abstract-art-a-hands-on-workshop.fr.md": "/fr/workshops/exploring-abstract-art-a-hands-on-workshop",
+  "content/pages-stories/privacy-policy.de.md": "/de/privacy-policy",
+  "content/pages-stories/privacy-policy.en.md": "/privacy-policy",
+  "content/pages-stories/privacy-policy.fr.md": "/fr/privacy-policy",
+  "content/pages-stories/terms.de.md": "/de/terms",
+  "content/pages-stories/terms.en.md": "/terms",
+  "content/pages-stories/terms.fr.md": "/fr/terms"
+}

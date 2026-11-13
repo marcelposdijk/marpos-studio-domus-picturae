@@ -1,0 +1,11 @@
+{
+  "title": "Artists demonstrating painting techniques during a masterclass",
+  "image": {
+    "src": "/images/news/masterclass-contemporary-painting/featuredImage.jpg",
+    "alt": "Artists demonstrating painting techniques during a masterclass"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 46
+}

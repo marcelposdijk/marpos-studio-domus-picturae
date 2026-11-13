@@ -13,16 +13,16 @@ describe("bodyPath", () => {
   it("names the directory after the collection's body field", () => {
     expect(bodyDirectory("news")).toBe("body");
     expect(bodyPath("news", "grand-opening", "fr")).toBe(
-      "/src/content/news/grand-opening/body/fr.md",
+      "/content/news-stories/grand-opening.fr.md",
     );
   });
 });
 
 describe("bodyMarkdown", () => {
   const sources = {
-    "/src/content/news/opening/body/en.md": "English body",
-    "/src/content/news/opening/body/fr.md": "Corps français",
-    "/src/content/news/opening/body/de.md": "   \n",
+    "/content/news-stories/opening.en.md": "English body",
+    "/content/news-stories/opening.fr.md": "Corps français",
+    "/content/news-stories/opening.de.md": "   \n",
   };
 
   it("uses the requested locale when present", () => {
@@ -71,9 +71,9 @@ describe("renderMarkdown", () => {
 
 describe("renderBodyFrom", () => {
   const sources = {
-    "/src/content/news/opening/body/en.md": "First *one*.\n\nSecond.\n\nLast.",
-    "/src/content/news/single/body/en.md": "Only paragraph.",
-    "/src/content/news/single/body/fr.md": "  ",
+    "/content/news-stories/opening.en.md": "First *one*.\n\nSecond.\n\nLast.",
+    "/content/news-stories/single.en.md": "Only paragraph.",
+    "/content/news-stories/single.fr.md": "  ",
   };
 
   it("renders the whole body with no closing unless asked", async () => {

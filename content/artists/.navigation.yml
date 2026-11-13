@@ -1,0 +1,5 @@
+title: Artists
+icon: i-lucide-file-text
+studio:
+  filters: ["isEstate"]
+  story: false

@@ -1,0 +1,11 @@
+{
+  "title": "A figure in a neon-lit city at night",
+  "image": {
+    "src": "/images/workshops/digital-art-and-traditional-media/image.jpg",
+    "alt": "A figure in a neon-lit city at night"
+  },
+  "categories": ["workshops"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 4
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Contemporary artwork from Domus Picturae collection",
+  "image": {
+    "src": "/images/about/animatedImages/5/image.jpg",
+    "alt": "Contemporary artwork from Domus Picturae collection"
+  },
+  "categories": ["about"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 26
+}

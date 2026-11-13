@@ -1,0 +1,11 @@
+{
+  "title": "A large sculptural work",
+  "image": {
+    "src": "/images/news/james-park-sculptural-installation/slides/1/image.jpg",
+    "alt": "A large sculptural work"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 34
+}

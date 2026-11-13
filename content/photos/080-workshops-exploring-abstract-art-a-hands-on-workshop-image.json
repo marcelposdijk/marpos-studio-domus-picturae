@@ -1,0 +1,11 @@
+{
+  "title": "Visitors in a modern art museum gallery",
+  "image": {
+    "src": "/images/workshops/exploring-abstract-art-a-hands-on-workshop/image.jpg",
+    "alt": "Visitors in a modern art museum gallery"
+  },
+  "categories": ["workshops"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 0
+}

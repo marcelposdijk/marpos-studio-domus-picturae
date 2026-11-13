@@ -1,0 +1,11 @@
+{
+  "title": "Bird's-eye view of green mountains",
+  "image": {
+    "src": "/images/news/yuki-tanaka-digital-traditional/slides/1/image.jpg",
+    "alt": "Bird's-eye view of green mountains"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 42
+}

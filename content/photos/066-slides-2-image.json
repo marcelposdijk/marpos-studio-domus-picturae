@@ -1,0 +1,11 @@
+{
+  "title": "Museum building",
+  "image": {
+    "src": "/images/news/james-park-sculptural-installation/slides/2/image.jpg",
+    "alt": "Museum building"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 35
+}

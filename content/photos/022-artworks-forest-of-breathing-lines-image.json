@@ -1,0 +1,11 @@
+{
+  "title": "Digital forest made of vertical glowing strokes",
+  "image": {
+    "src": "/images/artworks/forest-of-breathing-lines/image.png",
+    "alt": "Digital forest made of vertical glowing strokes"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 72
+}

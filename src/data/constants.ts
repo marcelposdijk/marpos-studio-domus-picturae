@@ -2,8 +2,8 @@ import socialImageSrc from "@images/social.png";
 
 /**
  * Build-time site constants. Everything editorial (gallery name, contact
- * details, social links) lives in the `site` singleton (`src/content/site/`)
- * and is edited through Keystatic; only values the build itself needs are
+ * details, social links) lives in the `site` singleton (`content/site/`)
+ * and is edited through Marpos Studio; only values the build itself needs are
  * here. The canonical origin is `site` in astro.config.mjs (read through
  * `pageContext()` in `src/utils/seo.ts`), not a constant.
  */

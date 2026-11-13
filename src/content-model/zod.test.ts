@@ -98,7 +98,7 @@ describe("entryPattern", () => {
     ).toBe("*.json");
     expect(
       entryPattern(collection({ label: "x", layout: "directory", fields: {} })),
-    ).toBe("*/index.json");
+    ).toBe("*.json");
     expect(entryPattern(singleton({ label: "x", fields: {} }))).toBe(
       "index.json",
     );

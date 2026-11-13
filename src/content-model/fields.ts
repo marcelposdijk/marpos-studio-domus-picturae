@@ -4,8 +4,7 @@
  * Each descriptor says what a field *is* (its kind, whether it is localised,
  * whether it is required) and how the admin should present it (label,
  * description, options). `zod.ts` turns descriptors into the schemas Astro
- * validates content with; `keystatic.ts` turns the same descriptors into the
- * admin UI. Neither side is written by hand.
+ * validates content with; Marpos Studio reads the same native schemas.
  */
 
 interface Base {
@@ -17,7 +16,7 @@ export interface SlugField extends Base {
   kind: "slug";
 }
 
-/** A display name that also names the entry's file (Keystatic's slug field). */
+/** A display name that also names the entry's file (the original editor's naming convention). */
 export interface NameField extends Base {
   kind: "name";
 }
@@ -39,7 +38,7 @@ export interface BodyField extends Base {
 
 export interface ImageField<R extends boolean = boolean> extends Base {
   kind: "image";
-  /** Folder under src/assets/images/ the admin uploads into. */
+  /** Category hint for media; Studio uploads into public/images/library. */
   directory: string;
   required: R;
 }
@@ -274,9 +273,9 @@ export const field = {
 
 /** How a collection's entries are laid out on disk. */
 export type EntryLayout =
-  /** `src/content/<name>/<slug>.json` */
+  /** `content/<name>/<slug>.json` */
   | "file"
-  /** `src/content/<name>/<slug>/index.json` plus `body/<locale>.md` */
+  /** Long-form records now use flat JSON plus linked locale stories. */
   | "directory";
 
 export interface CollectionDescriptor<S extends Shape = Shape> {

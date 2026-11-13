@@ -1,0 +1,11 @@
+{
+  "title": "A mountain lake",
+  "image": {
+    "src": "/images/news/yuki-tanaka-digital-traditional/slides/0/image.jpg",
+    "alt": "A mountain lake"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 41
+}

@@ -61,7 +61,7 @@ export function presentArtwork(
   );
   if (!artist) {
     throw new Error(
-      `Artwork "${artwork.id}" references artist "${artwork.data.artist.id}", which does not exist in src/content/artists/.`,
+      `Artwork "${artwork.id}" references artist "${artwork.data.artist.id}", which does not exist in content/artists/.`,
     );
   }
   const { availability, dimensions } = artwork.data;

@@ -1,0 +1,11 @@
+{
+  "title": "A purple and white swirl",
+  "image": {
+    "src": "/images/news/emma-thompson-solo-exhibition/slides/4/image.jpg",
+    "alt": "A purple and white swirl"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 52
+}

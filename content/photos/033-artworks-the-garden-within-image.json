@@ -1,0 +1,11 @@
+{
+  "title": "Abstract botanical shapes in muted green",
+  "image": {
+    "src": "/images/artworks/the-garden-within/image.jpg",
+    "alt": "Abstract botanical shapes in muted green"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 78
+}

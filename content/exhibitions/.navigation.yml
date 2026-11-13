@@ -1,0 +1,5 @@
+title: Exhibitions
+icon: i-lucide-file-text
+studio:
+  filters: ["startDate"]
+  story: false

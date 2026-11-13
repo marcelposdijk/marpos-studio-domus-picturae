@@ -1,0 +1,5 @@
+title: Artworks
+icon: i-lucide-file-text
+studio:
+  filters: ["availability", "artist"]
+  story: false

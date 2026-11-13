@@ -1,12 +1,11 @@
+import { readFileSync, realpathSync } from "node:fs";
+import { resolve, sep } from "node:path";
+import { imageSize } from "image-size";
 import type { ImageMetadata } from "astro";
 import type { Locale } from "@/i18n/config";
 import { text, type LocalizedInput } from "@/i18n/localized";
 
-/**
- * Every image under `src/assets/images/`, keyed by its path from the project
- * root. Keystatic stores image paths as `/images/<folder>/<file>` (its
- * `publicPath`), which maps 1:1 onto `src/assets/images/<folder>/<file>`.
- */
+/** Decorative source assets remain imported; editable media is read from public. */
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/**/*.{jpg,jpeg,png,webp,avif}",
   { eager: true },
@@ -40,10 +39,33 @@ export function picture(
 ): Picture | null {
   if (!source.image) return null;
   const path = source.image.startsWith("/") ? source.image : `/${source.image}`;
-  const found = images[`/src/assets${path}`];
+  let found = images[`/src/assets${path}`];
+  if (
+    path.startsWith("/images/") &&
+    !path.includes("..") &&
+    !path.includes("\\")
+  ) {
+    try {
+      const root = realpathSync(resolve("public"));
+      const file = realpathSync(resolve(root, path.slice(1)));
+      if (!file.startsWith(root + sep)) throw new Error("Image outside public");
+      const size = imageSize(readFileSync(file));
+      found = {
+        default: {
+          src: path,
+          width: size.width,
+          height: size.height,
+          format: size.type === "jpg" ? "jpeg" : size.type,
+          fsPath: file,
+        } as ImageMetadata,
+      };
+    } catch {
+      /* Report the same useful content error below. */
+    }
+  }
   if (!found) {
     throw new Error(
-      `Image not found: "${source.image}" (expected src/assets${path}). Fix the path or restore the file.`,
+      `Image not found: "${source.image}" (expected public${path} or a decorative src/assets image). Fix the path or restore the file.`,
     );
   }
   return {

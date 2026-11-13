@@ -1,0 +1,11 @@
+{
+  "title": "Abstract human figure outlined in gold",
+  "image": {
+    "src": "/images/artworks/golden-anatomy/image.jpg",
+    "alt": "Abstract human figure outlined in gold"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 76
+}

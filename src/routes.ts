@@ -32,6 +32,7 @@ export const routes = {
   events: (locale: Locale) => localizePath(locale, "/events"),
   news: (locale: Locale) => localizePath(locale, "/news"),
   about: (locale: Locale) => localizePath(locale, "/about"),
+  page: (locale: Locale, page: string) => localizePath(locale, `/${page}`),
   terms: (locale: Locale) => localizePath(locale, "/terms"),
   privacy: (locale: Locale) => localizePath(locale, "/privacy-policy"),
 

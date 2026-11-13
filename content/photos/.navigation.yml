@@ -1,0 +1,9 @@
+title: Photos
+icon: i-lucide-images
+studio:
+  filters: ["categories", "visible"]
+  view: media
+  media:
+    directory: images/library
+    formats: [jpg, jpeg, png, webp, gif, avif]
+    maxBytes: 10485760

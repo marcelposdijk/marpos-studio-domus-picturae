@@ -1,0 +1,5 @@
+title: News
+icon: i-lucide-file-text
+studio:
+  filters: ["pubDate"]
+  story: false

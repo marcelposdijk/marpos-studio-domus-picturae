@@ -1,0 +1,11 @@
+{
+  "title": "Vibrant red abstract composition",
+  "image": {
+    "src": "/images/artworks/reverie-in-red/image.jpg",
+    "alt": "Vibrant red abstract composition"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 61
+}

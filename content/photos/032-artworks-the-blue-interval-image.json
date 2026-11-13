@@ -1,0 +1,11 @@
+{
+  "title": "Abstract painting dominated by deep blues",
+  "image": {
+    "src": "/images/artworks/the-blue-interval/image.jpg",
+    "alt": "Abstract painting dominated by deep blues"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 74
+}

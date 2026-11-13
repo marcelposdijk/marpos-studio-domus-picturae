@@ -1,0 +1,11 @@
+{
+  "title": "Rolling hills at dusk",
+  "image": {
+    "src": "/images/news/yuki-tanaka-digital-traditional/slides/4/image.jpg",
+    "alt": "Rolling hills at dusk"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 45
+}

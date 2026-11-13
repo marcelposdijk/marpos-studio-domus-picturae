@@ -1,0 +1,11 @@
+{
+  "title": "Minimal digital seascape with glowing horizon line",
+  "image": {
+    "src": "/images/artworks/horizon-pulse/image.png",
+    "alt": "Minimal digital seascape with glowing horizon line"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 79
+}

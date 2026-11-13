@@ -1,0 +1,11 @@
+{
+  "title": "A blurry image of a black background with multicoloured lines",
+  "image": {
+    "src": "/images/news/emma-thompson-solo-exhibition/slides/0/image.jpg",
+    "alt": "A blurry image of a black background with multicoloured lines"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 48
+}

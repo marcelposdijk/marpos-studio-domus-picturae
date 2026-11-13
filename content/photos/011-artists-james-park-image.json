@@ -1,0 +1,11 @@
+{
+  "title": "Portrait of James Park",
+  "image": {
+    "src": "/images/artists/james-park/image.jpg",
+    "alt": "Portrait of James Park"
+  },
+  "categories": ["artists"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 53
+}

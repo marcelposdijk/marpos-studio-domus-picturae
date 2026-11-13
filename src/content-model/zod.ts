@@ -113,11 +113,20 @@ function fieldSchema(field: Field, deps: ZodDeps): z.ZodTypeAny | null {
         ? localized(field.required)
         : optional(field.required, z.string());
     case "image":
-      return optional(field.required, z.string());
+      return optional(
+        field.required,
+        z
+          .string()
+          .startsWith("/images/")
+          .meta({ $content: { editor: { input: "media" } } }),
+      );
     case "relation":
       return optional(field.required, deps.reference(field.collection));
     case "date":
-      return optional(field.required, z.coerce.date());
+      return optional(
+        field.required,
+        z.coerce.date().meta({ $content: { editor: { input: "date" } } }),
+      );
     case "integer":
       return optional(field.required, z.number().int());
     case "number":
@@ -161,10 +170,10 @@ export function schemaFor<S extends Shape>(
   return shapeSchema(descriptor.fields, deps);
 }
 
-/** Glob pattern (relative to `src/content/<name>`) matching a collection's entry files. */
+/** Glob pattern (relative to `content/<name>`) matching a collection's entry files. */
 export function entryPattern(
   descriptor: CollectionDescriptor | SingletonDescriptor,
 ): string {
   if (!("layout" in descriptor)) return "index.json";
-  return descriptor.layout === "directory" ? "*/index.json" : "*.json";
+  return "*.json";
 }

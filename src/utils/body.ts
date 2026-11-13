@@ -24,13 +24,7 @@ export type BodyCollection = {
 /** Raw Markdown keyed by path from the project root, as `import.meta.glob` returns it. */
 export type BodySources = Record<string, string>;
 
-/**
- * The directory the body files live in. Keystatic stores a nested content
- * field at `<field key>/<locale>.md`, so the directory is whatever the
- * collection's body field is called in the model; reading the key from the
- * model (rather than hard-coding "body") keeps this side in step with what
- * Keystatic writes if the field is ever renamed.
- */
+/** Model field key used to identify collections with long text. */
 export function bodyDirectory(collection: BodyCollection): string {
   const entry = Object.entries(collections[collection].fields).find(
     ([, field]) => field.kind === "body",
@@ -39,13 +33,13 @@ export function bodyDirectory(collection: BodyCollection): string {
   return entry[0];
 }
 
-/** Path of one locale's body file, from the project root. */
+/** Stable internal key for a parent/locale pair; not an on-disk filename. */
 export function bodyPath(
   collection: BodyCollection,
   id: string,
   locale: Locale,
 ): string {
-  return `/src/content/${collection}/${id}/${bodyDirectory(collection)}/${locale}.md`;
+  return `/content/${collection}-stories/${id}.${locale}.md`;
 }
 
 /**

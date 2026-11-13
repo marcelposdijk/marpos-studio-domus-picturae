@@ -1,0 +1,11 @@
+{
+  "title": "Abstract rainbow spectrum blending into darkness",
+  "image": {
+    "src": "/images/artworks/spectrum-of-thought/image.jpg",
+    "alt": "Abstract rainbow spectrum blending into darkness"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 70
+}

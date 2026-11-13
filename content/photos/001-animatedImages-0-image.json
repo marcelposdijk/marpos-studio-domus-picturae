@@ -1,0 +1,11 @@
+{
+  "title": "Featured artist work displayed at the gallery",
+  "image": {
+    "src": "/images/about/animatedImages/0/image.jpg",
+    "alt": "Featured artist work displayed at the gallery"
+  },
+  "categories": ["about"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 21
+}

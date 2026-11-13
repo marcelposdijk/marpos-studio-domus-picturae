@@ -11,8 +11,10 @@ import { entryPattern, schemaFor } from "./content-model/zod";
 /**
  * Astro content collections, derived from the content model in
  * `src/content-model/collections.ts`. Every collection lives in
- * `src/content/<name>/`; see docs/content.md for the layouts.
+ * `content/<name>/`; see docs/content.md for the layouts.
  */
+
+import { studioCollections } from "./content-model/studio";
 
 const deps = { reference };
 
@@ -23,13 +25,14 @@ function define<S extends Shape>(
   return defineCollection({
     loader: glob({
       pattern: entryPattern(descriptor),
-      base: `./src/content/${name}`,
+      base: `./content/${name}`,
     }),
     schema: schemaFor(descriptor, deps),
   });
 }
 
 export const collections = {
+  ...studioCollections(),
   artists: define("artists", model.artists),
   artworks: define("artworks", model.artworks),
   news: define("news", model.news),

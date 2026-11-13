@@ -12,6 +12,7 @@ import {
   type ArtworkPresentation,
 } from "./artwork-presentation";
 import {
+  bodyPath,
   renderBodyFrom,
   type BodyCollection,
   type BodySources,
@@ -50,14 +51,13 @@ const getHomepage = () =>
 export const getAboutPage = () =>
   getEntry("about", "index").then(required("about"));
 
-/** A standalone page (terms, privacy policy) by its id in `src/content/pages/`. */
+/** A standalone page (terms, privacy policy) by its id in `content/pages/`. */
 export const getPage = (id: string) =>
   getEntry("pages", id).then(required(`pages/${id}`));
 
 function required<T>(name: string) {
   return (entry: T | undefined): T => {
-    if (!entry)
-      throw new Error(`Missing content: src/content/${name}/index.json`);
+    if (!entry) throw new Error(`Missing content: content/${name}/index.json`);
     return entry;
   };
 }
@@ -158,23 +158,32 @@ export async function getNews(locale: Locale) {
 
 // ---------------------------------------------------------------- bodies
 
-/** Raw Markdown bodies of every directory-style entry, keyed by path from the project root. */
-const bodies: BodySources = import.meta.glob<string>(
-  "/src/content/*/*/*/*.md",
-  { query: "?raw", import: "default", eager: true },
-);
-
-/**
- * Render an entry's localised body to HTML. With `splitClosing`, the last
- * paragraph comes back separately (see `renderBodyFrom`).
- */
-export function renderBody(
+/** Stories are native Markdown collections with an explicit parent and locale.
+ * Filenames are free: references survive Studio's identifier migration. */
+export async function renderBody(
   collection: BodyCollection,
   id: string,
   locale: Locale,
   options?: { splitClosing?: boolean },
 ): Promise<RenderedBody> {
-  return renderBodyFrom(bodies, collection, id, locale, options);
+  const names = {
+    news: "newsStories",
+    exhibitions: "exhibitionsStories",
+    workshops: "workshopsStories",
+    pages: "pagesStories",
+  } as const;
+  const entries = await getCollection(names[collection]);
+  const sources: BodySources = {};
+  for (const story of entries) {
+    if (story.data.entry.id !== id) continue;
+    const path = bodyPath(collection, id, story.data.locale);
+    if (path in sources)
+      throw new Error(
+        `Duplicate story for ${collection}/${id}/${story.data.locale}`,
+      );
+    sources[path] = story.body ?? "";
+  }
+  return renderBodyFrom(sources, collection, id, locale, options);
 }
 
 // ---------------------------------------------------------------- static paths
@@ -224,4 +233,38 @@ export async function workshopPaths() {
     params: { slug: workshop.id },
     props: { workshop },
   }));
+}
+
+export async function pagePaths() {
+  const reserved = new Set([
+    "terms",
+    "privacy-policy",
+    "about",
+    "artists",
+    "artworks",
+    "news",
+    "events",
+    "viewing-room",
+    "private-collection",
+    "template",
+    "404",
+    "fr",
+    "de",
+  ]);
+  const pages = await getCollection("pages");
+  for (const entry of pages) {
+    if (
+      reserved.has(entry.id) &&
+      !["terms", "privacy-policy"].includes(entry.id)
+    )
+      throw new Error(
+        `Page address "${entry.id}" collides with a built-in route. Choose another address.`,
+      );
+  }
+  return pages
+    .filter((entry) => !reserved.has(entry.id))
+    .map((entry) => ({
+      params: { slug: entry.id },
+      props: { page: entry.id },
+    }));
 }

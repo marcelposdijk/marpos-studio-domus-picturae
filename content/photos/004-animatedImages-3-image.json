@@ -1,0 +1,11 @@
+{
+  "title": "Artistic installation at Domus Picturae",
+  "image": {
+    "src": "/images/about/animatedImages/3/image.jpg",
+    "alt": "Artistic installation at Domus Picturae"
+  },
+  "categories": ["about"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 24
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Digital abstraction inspired by the northern lights",
+  "image": {
+    "src": "/images/exhibitions/luminous-ground/image.jpg",
+    "alt": "Digital abstraction inspired by the northern lights"
+  },
+  "categories": ["exhibitions"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 16
+}

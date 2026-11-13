@@ -126,7 +126,7 @@ function featuredArtworks(
     const artwork = artworks.find((a) => a.id === item.artwork.id);
     if (!artwork) {
       throw new Error(
-        `Homepage features artwork "${item.artwork.id}", which does not exist in src/content/artworks/.`,
+        `Homepage features artwork "${item.artwork.id}", which does not exist in content/artworks/.`,
       );
     }
     const presentation = presentArtwork(artwork, artists, locale);

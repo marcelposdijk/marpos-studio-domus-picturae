@@ -1,0 +1,11 @@
+{
+  "title": "Grey tunnel walkway",
+  "image": {
+    "src": "/images/news/domus-picturae-grand-opening/slides/2/image.jpg",
+    "alt": "Grey tunnel walkway"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 39
+}

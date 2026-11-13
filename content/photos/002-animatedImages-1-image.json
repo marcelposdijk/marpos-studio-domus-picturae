@@ -1,0 +1,11 @@
+{
+  "title": "Curated selection of modern art pieces",
+  "image": {
+    "src": "/images/about/animatedImages/1/image.jpg",
+    "alt": "Curated selection of modern art pieces"
+  },
+  "categories": ["about"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 22
+}

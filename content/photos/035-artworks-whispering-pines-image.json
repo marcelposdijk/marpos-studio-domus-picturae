@@ -1,0 +1,11 @@
+{
+  "title": "Forest landscape under soft morning light",
+  "image": {
+    "src": "/images/artworks/whispering-pines/image.jpg",
+    "alt": "Forest landscape under soft morning light"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 75
+}

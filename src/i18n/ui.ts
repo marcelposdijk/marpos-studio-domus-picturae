@@ -3,7 +3,7 @@ import type { Locale } from "./config";
 /**
  * UI strings: every piece of interface text that is not editorial content.
  * Editorial content (titles, biographies, article bodies) lives in
- * `src/content/` and is edited through Keystatic; these strings are part of
+ * `content/` and is edited through Marpos Studio; these strings are part of
  * the template's chrome and are edited here.
  *
  * `en` defines the shape; every other locale must provide the same keys, which

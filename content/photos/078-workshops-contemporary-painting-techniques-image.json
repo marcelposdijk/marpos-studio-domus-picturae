@@ -1,0 +1,11 @@
+{
+  "title": "A minimalist interior with a white wall and floor, featuring art and furniture",
+  "image": {
+    "src": "/images/workshops/contemporary-painting-techniques/image.jpg",
+    "alt": "A minimalist interior with a white wall and floor, featuring art and furniture"
+  },
+  "categories": ["workshops"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 2
+}

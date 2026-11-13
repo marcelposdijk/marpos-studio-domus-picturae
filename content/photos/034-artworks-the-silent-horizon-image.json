@@ -1,0 +1,11 @@
+{
+  "title": "Abstract landscape with golden horizon",
+  "image": {
+    "src": "/images/artworks/the-silent-horizon/image.jpg",
+    "alt": "Abstract landscape with golden horizon"
+  },
+  "categories": ["artworks"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 71
+}

@@ -87,7 +87,7 @@ Component `<script>` blocks import `gsap`, `ScrollTrigger` and the recipes from 
 
 Scroll reveals are declared in markup rather than wired up by selector: a section puts `data-reveal="lines"` on a heading or paragraph and `data-reveal="rule"` on an `<hr>`, and the page's script calls `reveal()` once. The hidden starting state lives in `base.css` under the same attribute, so nothing can be left hidden with no script to reveal it. Where a script still addresses an element by class (the hero, the collection images, the scroll scenes), the selector refers to the same class name as the styles; rename both together.
 
-`src/assets/scripts/fitText.ts` exports `fitText(element, { container, fill })`: it shrinks a single-line element's `font-size` until the text fits its container (or `fill` of it), re-measuring when the container resizes. The stylesheet's size remains the ceiling and the no-JS fallback. The hero and footer wordmarks use it because the gallery name comes from Keystatic and can be any length.
+`src/assets/scripts/fitText.ts` exports `fitText(element, { container, fill })`: it shrinks a single-line element's `font-size` until the text fits its container (or `fill` of it), re-measuring when the container resizes. The stylesheet's size remains the ceiling and the no-JS fallback. The hero and footer wordmarks use it because the gallery name comes from Marpos Studio and can be any length.
 
 Scroll scenes that only make sense with room to move — the 404 page — are built inside `onDesktop()`, and phones get a static layout from the same markup. The viewing room's track responds to the wheel, to pointer drag (touch and mouse) and to the arrow keys.
 

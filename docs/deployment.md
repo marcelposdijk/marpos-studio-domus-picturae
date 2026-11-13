@@ -1,24 +1,9 @@
 # Deployment
 
-`pnpm build` writes a fully static site to `dist/`. It has no server-side code, so it deploys to any static host: Vercel, Netlify, Cloudflare Pages, GitHub Pages, an S3 bucket, or a plain web server.
+This demonstration is **not deployed**. GitHub source hosting does not publish a website. The original upstream Vercel URL serves the upstream project, not this fork.
 
-Before deploying, set the canonical URL once: `site` in `astro.config.mjs`. Every absolute URL (sitemap, canonical, hreflang links, social sharing images, structured data) is derived from it. To deliver form submissions, set `PUBLIC_FORM_NEWSLETTER` and `PUBLIC_FORM_WORKSHOP` in the host's build environment (see `docs/forms.md`); without them the forms run in demo mode.
+The site builds fully static with `pnpm build`. Use Node 22.23.3+ (Node 24 recommended), the committed pnpm lockfile, and set `SITE_URL` to the intended real HTTPS origin. Without it, canonical/sitemap output intentionally uses the reserved placeholder `https://domus-picturae.example`.
 
-## Vercel (the demo)
+Deploy `dist/` to a chosen static host only when requested. Preserve clean URLs and verify all three locale prefixes, generated image URLs and form endpoints. GitHub Pages project subpaths require an explicit base-path review: the template uses root-relative public media and routes. No deployment/Pages workflow has been configured.
 
-The demo is hosted on Vercel. No adapter is needed for a static build; Vercel detects Astro and runs `pnpm build`. `vercel.json` only adds HTTP security headers and is ignored by other hosts, so you can keep or delete it.
-
-## Keystatic in production
-
-Keystatic's admin needs server routes, so `astro.config.mjs` includes it only during `astro dev`. Editing content is therefore a local workflow: run `pnpm dev`, edit at `/keystatic`, commit the changed files under `src/content/`, and deploy.
-
-To edit from a hosted admin instead:
-
-1. Add an SSR adapter (`pnpm astro add vercel`, `netlify`, `node`, …).
-2. In `keystatic.config.ts`, set `KEYSTATIC_STORAGE_MODE` to `"github"` and fill in `GITHUB_REPO`.
-3. Include the Keystatic integration in production builds by changing `includeKeystatic` in `astro.config.mjs`.
-4. Follow Keystatic's GitHub setup guide to create the GitHub App and environment variables.
-
-## Continuous integration
-
-`.github/workflows/ci.yml` runs on every push and pull request: Prettier (`pnpm format:check`), type and content checks (`pnpm check`) and a full build. Dependabot keeps dependencies current (`.github/dependabot.yml`).
+There is no Keystatic admin or SSR adapter. Marpos Studio edits content locally or through its GitHub workflow. Forms preserve upstream demo mode until their documented public service environment values are supplied; see `.env.template`.

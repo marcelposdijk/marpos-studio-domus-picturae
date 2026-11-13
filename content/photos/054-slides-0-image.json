@@ -1,0 +1,11 @@
+{
+  "title": "Five brown wooden chairs",
+  "image": {
+    "src": "/images/news/domus-picturae-grand-opening/slides/0/image.jpg",
+    "alt": "Five brown wooden chairs"
+  },
+  "categories": ["news"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 37
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Gallery collection highlighting contemporary artists",
+  "image": {
+    "src": "/images/about/animatedImages/4/image.jpg",
+    "alt": "Gallery collection highlighting contemporary artists"
+  },
+  "categories": ["about"],
+  "credit": "Domus Picturae template — see LICENSE",
+  "visible": true,
+  "order": 25
+}
