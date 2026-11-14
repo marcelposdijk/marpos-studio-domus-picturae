@@ -1,7 +1,7 @@
 {
   "name": "James Park",
   "isEstate": false,
-  "image": "/images/artists/james-park/image.jpg",
+  "image": "/src/assets/images/artists/james-park/image.jpg",
   "imageAlt": {
     "en": "Portrait of James Park",
     "fr": "Portrait de James Park",

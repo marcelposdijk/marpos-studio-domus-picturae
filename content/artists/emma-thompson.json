@@ -1,7 +1,7 @@
 {
   "name": "Emma Thompson",
   "isEstate": false,
-  "image": "/images/artists/emma-thompson/image.jpg",
+  "image": "/src/assets/images/artists/emma-thompson/image.jpg",
   "imageAlt": {
     "en": "Portrait of Emma Thompson",
     "fr": "Portrait de Emma Thompson",

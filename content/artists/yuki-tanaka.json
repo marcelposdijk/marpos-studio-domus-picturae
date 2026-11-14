@@ -1,7 +1,7 @@
 {
   "name": "Yuki Tanaka",
   "isEstate": false,
-  "image": "/images/artists/yuki-tanaka/image.jpg",
+  "image": "/src/assets/images/artists/yuki-tanaka/image.jpg",
   "imageAlt": {
     "en": "Portrait of Yuki Tanaka",
     "fr": "Portrait de Yuki Tanaka",

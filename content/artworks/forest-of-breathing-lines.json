@@ -6,7 +6,7 @@
   },
   "year": 2022,
   "artist": "marcus-weber",
-  "image": "/images/artworks/forest-of-breathing-lines/image.png",
+  "image": "/src/assets/images/artworks/forest-of-breathing-lines/image.png",
   "imageAlt": {
     "en": "Digital forest made of vertical glowing strokes",
     "fr": "Forêt numérique composée de traits verticaux lumineux",

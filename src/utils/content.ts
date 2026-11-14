@@ -1,3 +1,4 @@
+import { optimizeStoryImages } from "./story-images";
 import { readLocalizedStory } from "./localized-story.mjs";
 import { locales } from "../i18n/config";
 import { getCollection, getEntry } from "astro:content";
@@ -174,7 +175,19 @@ export async function renderBody(
   const sources: BodySources = {};
   for (const language of locales)
     sources[bodyPath(collection, id, language)] = translations[language];
-  return renderBodyFrom(sources, collection, id, locale, options);
+  const rendered = await renderBodyFrom(
+    sources,
+    collection,
+    id,
+    locale,
+    options,
+  );
+  return {
+    main: await optimizeStoryImages(rendered.main),
+    closing: rendered.closing
+      ? await optimizeStoryImages(rendered.closing)
+      : null,
+  };
 }
 
 // ---------------------------------------------------------------- static paths

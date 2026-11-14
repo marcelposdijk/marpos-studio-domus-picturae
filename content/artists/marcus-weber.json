@@ -1,7 +1,7 @@
 {
   "name": "Marcus Weber",
   "isEstate": true,
-  "image": "/images/artists/marcus-weber/image.jpg",
+  "image": "/src/assets/images/artists/marcus-weber/image.jpg",
   "imageAlt": {
     "en": "Portrait of Marcus Weber",
     "fr": "Portrait de Marcus Weber",

@@ -38,7 +38,7 @@ export interface BodyField extends Base {
 
 export interface ImageField<R extends boolean = boolean> extends Base {
   kind: "image";
-  /** Category hint for media; Studio uploads into public/images/library. */
+  /** Category hint for media; Studio uploads into src/assets/images/library. */
   directory: string;
   required: R;
 }

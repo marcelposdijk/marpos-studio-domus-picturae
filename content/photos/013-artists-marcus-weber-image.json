@@ -1,7 +1,7 @@
 {
   "title": "Portrait of Marcus Weber",
   "image": {
-    "src": "/images/artists/marcus-weber/image.jpg",
+    "src": "/src/assets/images/artists/marcus-weber/image.jpg",
     "alt": "Portrait of Marcus Weber"
   },
   "categories": ["artists"],

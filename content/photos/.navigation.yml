@@ -4,6 +4,6 @@ studio:
   filters: ["categories", "visible"]
   view: media
   media:
-    directory: images/library
+    directory: library
     formats: [jpg, jpeg, png, webp, gif, avif]
     maxBytes: 10485760

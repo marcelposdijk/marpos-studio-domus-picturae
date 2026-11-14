@@ -1,7 +1,7 @@
 {
   "title": "Five brown wooden chairs",
   "image": {
-    "src": "/images/news/domus-picturae-grand-opening/slides/0/image.jpg",
+    "src": "/src/assets/images/news/domus-picturae-grand-opening/slides/0/image.jpg",
     "alt": "Five brown wooden chairs"
   },
   "categories": ["news"],

@@ -6,7 +6,7 @@
   },
   "year": 2019,
   "artist": "yuki-tanaka",
-  "image": "/images/artworks/memory-of-water/image.jpg",
+  "image": "/src/assets/images/artworks/memory-of-water/image.jpg",
   "imageAlt": {
     "en": "Flowing blue tones suggesting the movement of water",
     "fr": "Tons bleus fluides suggérant le mouvement de l'eau",

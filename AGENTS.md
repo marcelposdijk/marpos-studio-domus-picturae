@@ -20,7 +20,7 @@ Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/age
 
 ## Marpos Studio fork
 
-- Editable records, including unified multilingual Markdown entries, live in `content/`; editable media lives in `public/images`. Decorative imported assets remain in `src/assets`.
+- Editable records, including unified multilingual Markdown entries, live in `content/`; editable media lives in `src/assets/images`. Decorative imported assets remain in `src/assets`.
 - See `MARPOS-STUDIO.md`. Do not reintroduce Keystatic paths or an additional admin.
 - Preserve the full media contract: native photo/video schemas, records, root library references and collection media settings.
 - Run `pnpm verify:demo` after build. For the optional real Studio integration check use `MARPOS_STUDIO_ROOT` with `pnpm verify:studio`.

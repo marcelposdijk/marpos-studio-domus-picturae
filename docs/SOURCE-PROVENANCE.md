@@ -6,7 +6,7 @@ The preparation compared every migrated record and body against the original Git
 
 - **45 JSON records** preserved field-for-field, except the intentional `site.sourceUrl` change to this fork.
 - **45 Markdown bodies** preserved byte-for-byte after removing the newly added story frontmatter.
-- **77 editable source images** moved byte-for-byte into `public/images`.
+- **77 editable source images** moved byte-for-byte into `src/assets/images`.
 - Original public workshop MP4 previews remain public files and are excluded from the photo library.
 - **77 image records** make the existing editable gallery images discoverable in Studio; root library references, native schema, collection media settings and media hints are all included.
 

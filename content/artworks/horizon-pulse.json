@@ -6,7 +6,7 @@
   },
   "year": 2023,
   "artist": "marcus-weber",
-  "image": "/images/artworks/horizon-pulse/image.png",
+  "image": "/src/assets/images/artworks/horizon-pulse/image.png",
   "imageAlt": {
     "en": "Minimal digital seascape with glowing horizon line",
     "fr": "Paysage marin numérique minimal avec une ligne d'horizon lumineuse",

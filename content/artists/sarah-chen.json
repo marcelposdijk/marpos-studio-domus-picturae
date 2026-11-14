@@ -1,7 +1,7 @@
 {
   "name": "Sarah Chen",
   "isEstate": false,
-  "image": "/images/artists/sarah-chen/image.jpg",
+  "image": "/src/assets/images/artists/sarah-chen/image.jpg",
   "imageAlt": {
     "en": "Portrait of Sarah Chen",
     "fr": "Portrait de Sarah Chen",

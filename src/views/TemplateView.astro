@@ -7,7 +7,7 @@
  * this view, its route and `src/assets/images/template/`; the navbar link goes
  * with the route.
  */
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import MainLayout from "@layouts/MainLayout.astro";
 import Navbar from "@sections/Chrome/Navbar.astro";
 import Footer from "@sections/Chrome/Footer.astro";
@@ -23,7 +23,8 @@ interface Props {
 const { locale } = Astro.props;
 
 const NAME = "Domus Picturae";
-const REPOSITORY = "https://github.com/marcelposdijk/marpos-studio-domus-picturae";
+const REPOSITORY =
+  "https://github.com/marcelposdijk/marpos-studio-domus-picturae";
 
 const shot = (file: string, alt: string) =>
   picture({ image: `/images/template/${file}.png` }, locale, alt)!;
@@ -73,7 +74,7 @@ const features = [
   },
   {
     title: "Marpos Studio CMS",
-    body: "A desktop content workspace for structured multilingual fields, Markdown stories and a public image library. Open this repository in Marpos Studio.",
+    body: "A desktop content workspace for structured multilingual fields, Markdown stories and an image library. Open this repository in Marpos Studio.",
   },
   {
     title: "English, French and German",
@@ -130,7 +131,11 @@ cd my-gallery
 pnpm install
 pnpm dev`;
 
-const cover = shot("home-desktop", "").src;
+const cover = await getImage({
+  src: shot("home-desktop", "").src,
+  width: 1200,
+  format: "webp",
+});
 const meta = templateMeta(
   pageContext(Astro, locale),
   "Astro template for art galleries",

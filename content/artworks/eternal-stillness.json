@@ -6,7 +6,7 @@
   },
   "year": 2023,
   "artist": "emma-thompson",
-  "image": "/images/artworks/eternal-stillness/image.jpg",
+  "image": "/src/assets/images/artworks/eternal-stillness/image.jpg",
   "imageAlt": {
     "en": "Minimalist composition with soft white tones",
     "fr": "Composition minimaliste aux tons blancs doux",

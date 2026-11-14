@@ -1,7 +1,7 @@
 {
   "title": "Minimal horizontal lines in shades of grey",
   "image": {
-    "src": "/images/artworks/lines-of-silence/image.jpg",
+    "src": "/src/assets/images/artworks/lines-of-silence/image.jpg",
     "alt": "Minimal horizontal lines in shades of grey"
   },
   "categories": ["artworks"],

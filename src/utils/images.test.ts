@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { picture, pictures } from "./images";
 
-const existing = "/images/artworks/the-blue-interval/image.jpg";
+const existing = "/src/assets/images/artworks/the-blue-interval/image.jpg";
 
 describe("picture", () => {
   it("resolves a stored path to the imported image with the localised alt", () => {
@@ -31,7 +31,7 @@ describe("picture", () => {
 
   it("throws when the file is missing so the build fails", () => {
     expect(() =>
-      picture({ image: "/images/artworks/nope/image.jpg" }, "en"),
+      picture({ image: "/src/assets/images/artworks/nope/image.jpg" }, "en"),
     ).toThrow(/Image not found/);
   });
 });

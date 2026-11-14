@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
+import { optimizedMediaOnly } from "./scripts/verify-media.mjs";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import { defaultLocale, locales } from "./src/i18n/config.ts";
@@ -53,6 +54,7 @@ export default defineConfig({
   },
 
   integrations: [
+    optimizedMediaOnly(),
     sitemap({
       i18n: {
         defaultLocale,

@@ -6,7 +6,7 @@
   },
   "year": 2024,
   "artist": "emma-thompson",
-  "image": "/images/artworks/the-silent-horizon/image.jpg",
+  "image": "/src/assets/images/artworks/the-silent-horizon/image.jpg",
   "imageAlt": {
     "en": "Abstract landscape with golden horizon",
     "fr": "Paysage abstrait à l'horizon doré",

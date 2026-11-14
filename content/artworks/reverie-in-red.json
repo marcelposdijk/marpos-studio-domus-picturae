@@ -6,7 +6,7 @@
   },
   "year": 2021,
   "artist": "james-park",
-  "image": "/images/artworks/reverie-in-red/image.jpg",
+  "image": "/src/assets/images/artworks/reverie-in-red/image.jpg",
   "imageAlt": {
     "en": "Vibrant red abstract composition",
     "fr": "Composition abstraite d'un rouge vibrant",

@@ -5,7 +5,7 @@
     "fr": "Techniques de peinture contemporaine : une masterclass",
     "de": "Zeitgenössische Maltechniken: Eine Masterclass"
   },
-  "image": "/images/workshops/contemporary-painting-techniques/image.jpg",
+  "image": "/src/assets/images/workshops/contemporary-painting-techniques/image.jpg",
   "imageAlt": {
     "en": "A minimalist interior with a white wall and floor, featuring art and furniture",
     "fr": "Un intérieur minimaliste aux murs et sol blancs, avec des œuvres et du mobilier",

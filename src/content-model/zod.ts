@@ -124,7 +124,7 @@ function fieldSchema(field: Field, deps: ZodDeps): z.ZodTypeAny | null {
         field.required,
         z
           .string()
-          .startsWith("/images/")
+          .startsWith("/")
           .meta({ $content: { editor: { input: "media" } } }),
       );
     case "relation":

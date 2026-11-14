@@ -1,7 +1,7 @@
 {
   "title": "Digital rendering of a lighthouse surrounded by soft glowing tides",
   "image": {
-    "src": "/images/artworks/lighthouse-of-quiet-tides/image.png",
+    "src": "/src/assets/images/artworks/lighthouse-of-quiet-tides/image.png",
     "alt": "Digital rendering of a lighthouse surrounded by soft glowing tides"
   },
   "categories": ["artworks"],

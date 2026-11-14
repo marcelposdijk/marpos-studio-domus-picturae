@@ -11,7 +11,7 @@
     "fr": "Domus Picturae annonce un nouveau programme pédagogique de masterclasses animées par les artistes de la galerie, à commencer par Emma Thompson et Sophie Laurent en mars 2025.",
     "de": "Domus Picturae kündigt ein neues Bildungsprogramm mit Masterclasses von Künstlern der Galerie an – den Auftakt machen Emma Thompson und Sophie Laurent im März 2025."
   },
-  "featuredImage": "/images/news/masterclass-contemporary-painting/featuredImage.jpg",
+  "featuredImage": "/src/assets/images/news/masterclass-contemporary-painting/featuredImage.jpg",
   "featuredImageAlt": {
     "en": "Artists demonstrating painting techniques during a masterclass",
     "fr": "Artistes présentant des techniques de peinture lors d'une masterclass",

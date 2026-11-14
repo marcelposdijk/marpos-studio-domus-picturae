@@ -29,6 +29,8 @@ Schema defaults include `studio.blocks`; collection metadata supplies `studio.bo
 
 `studio.ts` contains native photo and video schemas. Photo records use title, image `{src, alt}`, optional thumbnail, categories, credit, visible and order. Video records use title, YouTube ID, optional image thumbnail, categories, visible and order. Root and collection `.navigation.yml` files configure real picker discovery, media views, filters and upload destinations. Existing local workshop MP4s use the clearly labelled `previewClip` field and retain their hover behaviour.
 
-All editable image URLs are public `/images/` paths. `picture()` validates files, reads their dimensions and supplies Astro optimisation metadata. Decorative source assets remain imported. The gallery website queries the catalogue/programme records; media libraries are reusable authoring sources.
+Editable image references use `/src/assets/images/` source paths. `picture()` resolves imported Astro image metadata; page components generate optimized variants at their required sizes. Original photos are build inputs and are not served directly. The gallery website queries the catalogue/programme records; media libraries are reusable authoring sources.
 
 After adding routes/types, update preview generation and verification. Run the README checks and keep all translations and shared fields intact.
+
+Media storage is configured by `studio.mediaRoot` in the project-root `.navigation.yml` (here `src/assets/images`). It can name any project-relative folder. Collection `studio.media.directory` settings select upload subfolders within it. Source references must be resolved through the website’s image pipeline. Astro generates optimized variants; the build rejects direct original references and removes unused emitted originals.

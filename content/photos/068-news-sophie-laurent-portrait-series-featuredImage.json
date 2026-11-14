@@ -1,7 +1,7 @@
 {
   "title": "Portrait by Sophie Laurent from the Intimate Portraits series",
   "image": {
-    "src": "/images/news/sophie-laurent-portrait-series/featuredImage.jpg",
+    "src": "/src/assets/images/news/sophie-laurent-portrait-series/featuredImage.jpg",
     "alt": "Portrait by Sophie Laurent from the Intimate Portraits series"
   },
   "categories": ["news"],

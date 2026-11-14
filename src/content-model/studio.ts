@@ -5,7 +5,7 @@ import { z } from "astro/zod";
 const image = z.object({
   src: z
     .string()
-    .startsWith("/images/")
+    .startsWith("/")
     .regex(/\.(jpe?g|png|webp|gif|avif)$/i)
     .meta({ $content: { editor: { input: "media" } } }),
   alt: z.string(),

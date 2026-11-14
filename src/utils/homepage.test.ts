@@ -3,7 +3,7 @@ import { HOMEPAGE_ITEMS_LIMIT } from "@/data/constants";
 import * as f from "@/test/fixtures";
 import { presentHomepage, type HomepageEntries } from "./homepage";
 
-const image = "/images/artworks/the-blue-interval/image.jpg";
+const image = "/src/assets/images/artworks/the-blue-interval/image.jpg";
 const feature = (id: string, caption?: Record<string, string>) => ({
   artwork: { collection: "artworks", id },
   caption,

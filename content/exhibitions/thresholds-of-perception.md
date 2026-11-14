@@ -17,7 +17,7 @@
     "fr": "15 mars – 15 mai 2025",
     "de": "15. März – 15. Mai 2025"
   },
-  "image": "/images/exhibitions/thresholds-of-perception/image.jpg",
+  "image": "/src/assets/images/exhibitions/thresholds-of-perception/image.jpg",
   "imageAlt": {
     "en": "Geometric abstraction of urban structures",
     "fr": "Abstraction géométrique de structures urbaines",

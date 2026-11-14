@@ -37,6 +37,7 @@ const run = (command, args, input) => {
 };
 try {
   for (const name of [
+    ".navigation.yml",
     "content",
     "src",
     "public",
@@ -44,6 +45,7 @@ try {
     "astro.config.mjs",
     "tsconfig.json",
     "studio.preview.json",
+    "scripts",
   ])
     cpSync(join(root, name), join(temporary, name), { recursive: true });
   symlinkSync(
@@ -98,7 +100,7 @@ try {
   const videos = items.filter((item) => item.collection === "videos");
   assert.ok(photos.length >= 77 && videos.length >= 1);
   assert.ok(photos.every((item) => item.folders.photos.studioView === "media"));
-  assert.equal(photos[0].folders.photos.media.directory, "images/library");
+  assert.equal(photos[0].folders.photos.media.directory, "library");
   assert.equal(videos[0].folders.videos.media.kind, "video");
   assert.equal(videos[0].folders.videos.media.thumbnailAspectRatio, "16:9");
   assert.deepEqual(
@@ -204,7 +206,7 @@ try {
     directory: "photos",
   });
   const src = typeof upload === "string" ? upload : upload.src;
-  assert.match(src, /^\/images\/library\//);
+  assert.match(src, /^\/src\/assets\/images\/library\//);
   const photo = call("new_content", {
     collection: "photos",
     title: "Library upload check",
@@ -231,7 +233,7 @@ try {
   });
   const videoThumbnail =
     typeof videoUpload === "string" ? videoUpload : videoUpload.src;
-  assert.match(videoThumbnail, /^\/images\/video-thumbnails\//);
+  assert.match(videoThumbnail, /^\/src\/assets\/images\/video-thumbnails\//);
   const video = call("new_content", {
     collection: "videos",
     title: "Video library check",
@@ -254,20 +256,26 @@ try {
   news.body = writeMarkdownBlock(
     news.body,
     french,
-    readMarkdownBlock(news.body, french) + "\n\n" + embed,
+    readMarkdownBlock(news.body, french) +
+      "\n\n" +
+      embed +
+      `\n\n![Library image](${src})\n\n<img src="${videoThumbnail}" alt="Video thumbnail">`,
   );
   call("write_content", { document: news });
-  const build = spawnSync(
-    process.execPath,
-    [
-      join(root, "node_modules/astro/bin/astro.mjs"),
-      "build",
-      "--root",
-      temporary,
-    ],
-    { cwd: temporary, encoding: "utf8", maxBuffer: 20 * 1024 * 1024 },
-  );
-  assert.equal(build.status, 0, build.stderr + build.stdout);
+  const buildSite = () => {
+    const build = spawnSync(
+      process.execPath,
+      [
+        join(root, "node_modules/astro/bin/astro.mjs"),
+        "build",
+        "--root",
+        temporary,
+      ],
+      { cwd: temporary, encoding: "utf8", maxBuffer: 20 * 1024 * 1024 },
+    );
+    assert.equal(build.status, 0, build.stderr + build.stdout);
+  };
+  buildSite();
   const pageId = added.pages.path.split("/").pop().replace(/\.md$/, "");
   const frenchPage = readFileSync(
     join(temporary, `dist/fr/${pageId}/index.html`),
@@ -282,13 +290,50 @@ try {
   );
   assert.ok(frenchNews.includes(marker));
   assert.ok(frenchNews.includes("youtube-nocookie.com/embed/"));
+  assert.ok(frenchNews.includes("Library image"));
+  assert.ok(!frenchNews.includes("/src/assets/images/"));
+  assert.ok(frenchNews.includes("srcset="));
   const englishNews = readFileSync(
     join(temporary, "dist/news/domus-picturae-grand-opening/index.html"),
     "utf8",
   );
   assert.ok(!englishNews.includes(marker));
+  // The developer can choose a folder outside src/assets without changing the resolver.
+  writeFileSync(
+    join(temporary, ".navigation.yml"),
+    "studio:\n  mediaRoot: media/originals\n",
+  );
+  const customUpload = call("upload_image", {
+    name: "custom-root.png",
+    bytes: png,
+    contentPath: photos[0].path,
+    directory: "photos",
+  });
+  const customSrc =
+    typeof customUpload === "string" ? customUpload : customUpload.src;
+  assert.match(customSrc, /^\/media\/originals\/library\//);
+  assert.ok(
+    call("image_preview", { path: customSrc }).startsWith(
+      "data:image/png;base64,",
+    ),
+  );
+  news = call("read_content", { path: news.path });
+  news.body = writeMarkdownBlock(
+    news.body,
+    french,
+    readMarkdownBlock(news.body, french) +
+      `\n\n![Custom media folder](${customSrc})`,
+  );
+  call("write_content", { document: news });
+  buildSite();
+  const customHtml = readFileSync(
+    join(temporary, "dist/fr/news/domus-picturae-grand-opening/index.html"),
+    "utf8",
+  );
+  assert.ok(customHtml.includes("Custom media folder"));
+  assert.ok(!customHtml.includes(customSrc));
   console.log(
-    "Verified 11 collections, unified language editing and save/reopen, all six creation forms, both media choosers, real upload destinations, video record validation and rendered French video insertion on a temporary website copy.",
+    "Verified 11 collections, unified language editing and save/reopen, all six creation forms, both media choosers, real upload destinations, video record validation rendered French image/video insertion, optimized-only output and a custom media folder outside src/assets on a temporary website copy.",
   );
 } finally {
   rmSync(temporary, { recursive: true, force: true });

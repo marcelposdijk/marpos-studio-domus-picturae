@@ -5,7 +5,7 @@
     "fr": "Explorer l'art abstrait : un atelier pratique",
     "de": "Abstrakte Kunst erkunden: Ein praktischer Workshop"
   },
-  "image": "/images/workshops/exploring-abstract-art-a-hands-on-workshop/image.jpg",
+  "image": "/src/assets/images/workshops/exploring-abstract-art-a-hands-on-workshop/image.jpg",
   "imageAlt": {
     "en": "Visitors in a modern art museum gallery",
     "fr": "Visiteurs dans une salle de musée d'art moderne",

@@ -17,7 +17,7 @@
     "fr": "3 septembre – 31 octobre 2026",
     "de": "3. September – 31. Oktober 2026"
   },
-  "image": "/images/exhibitions/echoes-of-stillness/image.jpg",
+  "image": "/src/assets/images/exhibitions/echoes-of-stillness/image.jpg",
   "imageAlt": {
     "en": "Abstract landscape with a golden horizon",
     "fr": "Paysage abstrait à l'horizon doré",

@@ -1,7 +1,7 @@
 {
   "name": "Luca Moretti",
   "isEstate": false,
-  "image": "/images/artists/luca-moretti/image.jpg",
+  "image": "/src/assets/images/artists/luca-moretti/image.jpg",
   "imageAlt": {
     "en": "Portrait of Luca Moretti",
     "fr": "Portrait de Luca Moretti",

@@ -36,7 +36,7 @@
         "fr": "Espace d'exposition",
         "de": "Ausstellungsraum"
       },
-      "image": "/images/about/images/0/image.jpg",
+      "image": "/src/assets/images/about/images/0/image.jpg",
       "imageAlt": {
         "en": "Interior view of Domus Picturae gallery showcasing contemporary artworks",
         "fr": "Vue intérieure de la galerie Domus Picturae avec des œuvres contemporaines",
@@ -49,7 +49,7 @@
         "fr": "Collection choisie",
         "de": "Kuratierte Sammlung"
       },
-      "image": "/images/about/images/1/image.jpg",
+      "image": "/src/assets/images/about/images/1/image.jpg",
       "imageAlt": {
         "en": "Artworks displayed in the gallery's main exhibition hall",
         "fr": "Œuvres exposées dans la salle principale de la galerie",
@@ -59,7 +59,7 @@
   ],
   "animatedImages": [
     {
-      "image": "/images/about/animatedImages/0/image.jpg",
+      "image": "/src/assets/images/about/animatedImages/0/image.jpg",
       "imageAlt": {
         "en": "Featured artist work displayed at the gallery",
         "fr": "Œuvre d'un artiste exposée à la galerie",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "image": "/images/about/animatedImages/1/image.jpg",
+      "image": "/src/assets/images/about/animatedImages/1/image.jpg",
       "imageAlt": {
         "en": "Curated selection of modern art pieces",
         "fr": "Sélection d'œuvres d'art moderne",
@@ -75,7 +75,7 @@
       }
     },
     {
-      "image": "/images/about/animatedImages/2/image.jpg",
+      "image": "/src/assets/images/about/animatedImages/2/image.jpg",
       "imageAlt": {
         "en": "Exhibition space showcasing diverse artistic expressions",
         "fr": "Espace d'exposition aux expressions artistiques variées",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "image": "/images/about/animatedImages/3/image.jpg",
+      "image": "/src/assets/images/about/animatedImages/3/image.jpg",
       "imageAlt": {
         "en": "Artistic installation at Domus Picturae",
         "fr": "Installation artistique à Domus Picturae",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "image": "/images/about/animatedImages/4/image.jpg",
+      "image": "/src/assets/images/about/animatedImages/4/image.jpg",
       "imageAlt": {
         "en": "Gallery collection highlighting contemporary artists",
         "fr": "Collection de la galerie mettant en avant des artistes contemporains",
@@ -99,7 +99,7 @@
       }
     },
     {
-      "image": "/images/about/animatedImages/5/image.jpg",
+      "image": "/src/assets/images/about/animatedImages/5/image.jpg",
       "imageAlt": {
         "en": "Contemporary artwork from Domus Picturae collection",
         "fr": "Œuvre contemporaine de la collection Domus Picturae",

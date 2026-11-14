@@ -1,7 +1,7 @@
 {
   "title": "Digital abstraction inspired by northern lights",
   "image": {
-    "src": "/images/artworks/aurora-syntax/image.jpg",
+    "src": "/src/assets/images/artworks/aurora-syntax/image.jpg",
     "alt": "Digital abstraction inspired by northern lights"
   },
   "categories": ["artworks"],

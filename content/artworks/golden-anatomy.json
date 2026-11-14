@@ -6,7 +6,7 @@
   },
   "year": 2017,
   "artist": "luca-moretti",
-  "image": "/images/artworks/golden-anatomy/image.jpg",
+  "image": "/src/assets/images/artworks/golden-anatomy/image.jpg",
   "imageAlt": {
     "en": "Abstract human figure outlined in gold",
     "fr": "Figure humaine abstraite soulignée d'or",

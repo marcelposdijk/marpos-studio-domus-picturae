@@ -17,7 +17,7 @@
     "fr": "19 novembre 2026 – 16 janvier 2027",
     "de": "19. November 2026 – 16. Januar 2027"
   },
-  "image": "/images/exhibitions/luminous-ground/image.jpg",
+  "image": "/src/assets/images/exhibitions/luminous-ground/image.jpg",
   "imageAlt": {
     "en": "Digital abstraction inspired by the northern lights",
     "fr": "Abstraction numérique inspirée des aurores boréales",

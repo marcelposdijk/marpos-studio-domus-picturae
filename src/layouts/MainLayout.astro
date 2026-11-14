@@ -7,7 +7,7 @@
  *   variables.css reaches the canvas as well as the body; no component needs
  *   to know about it.
  */
-import { Font } from "astro:assets";
+import { Font, getImage } from "astro:assets";
 import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
 import type { Thing, WithContext } from "schema-dts";
@@ -41,7 +41,13 @@ const site = await getSiteIdentity(locale);
 const page = pageContext(Astro, locale);
 const pageTitle = title ? `${title} | ${site.name}` : site.name;
 const pageDescription = description ?? site.description;
-const socialImage = new URL(SITE.socialImage.src, page.site).href;
+const socialVariant = await getImage({
+  src: SITE.socialImage,
+  width: 1200,
+  format: "jpeg",
+  quality: 85,
+});
+const socialImage = new URL(socialVariant.src, page.site).href;
 const canonical = page.url.href;
 
 const defaultSchema = webPageSchema(page, site, {

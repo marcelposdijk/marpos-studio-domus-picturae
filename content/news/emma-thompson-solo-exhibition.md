@@ -11,7 +11,7 @@
     "fr": "Domus Picturae présente la première grande exposition personnelle des œuvres abstraites récentes d'Emma Thompson, explorant la couleur comme langage et le mouvement comme mémoire.",
     "de": "Domus Picturae zeigt die erste große Einzelausstellung der jüngsten abstrakten Arbeiten von Emma Thompson – Farbe als Sprache, Bewegung als Erinnerung."
   },
-  "featuredImage": "/images/news/emma-thompson-solo-exhibition/featuredImage.jpg",
+  "featuredImage": "/src/assets/images/news/emma-thompson-solo-exhibition/featuredImage.jpg",
   "featuredImageAlt": {
     "en": "Emma Thompson's abstract painting from the Chromatic Fields series",
     "fr": "Peinture abstraite d'Emma Thompson de la série Chromatic Fields",
@@ -19,7 +19,7 @@
   },
   "slides": [
     {
-      "image": "/images/news/emma-thompson-solo-exhibition/slides/0/image.jpg",
+      "image": "/src/assets/images/news/emma-thompson-solo-exhibition/slides/0/image.jpg",
       "imageAlt": {
         "en": "A blurry image of a black background with multicoloured lines",
         "fr": "Image floue d'un fond noir aux lignes multicolores",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "image": "/images/news/emma-thompson-solo-exhibition/slides/1/image.jpg",
+      "image": "/src/assets/images/news/emma-thompson-solo-exhibition/slides/1/image.jpg",
       "imageAlt": {
         "en": "Abstract colourful blobs with dark speckles",
         "fr": "Taches abstraites colorées avec des mouchetures sombres",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "image": "/images/news/emma-thompson-solo-exhibition/slides/2/image.jpg",
+      "image": "/src/assets/images/news/emma-thompson-solo-exhibition/slides/2/image.jpg",
       "imageAlt": {
         "en": "Abstract pink and white wavy pattern with colourful dots",
         "fr": "Motif ondulé abstrait rose et blanc avec des points colorés",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "image": "/images/news/emma-thompson-solo-exhibition/slides/3/image.jpg",
+      "image": "/src/assets/images/news/emma-thompson-solo-exhibition/slides/3/image.jpg",
       "imageAlt": {
         "en": "Abstract pattern with organic shapes and textures",
         "fr": "Motif abstrait aux formes et textures organiques",
@@ -71,7 +71,7 @@
       }
     },
     {
-      "image": "/images/news/emma-thompson-solo-exhibition/slides/4/image.jpg",
+      "image": "/src/assets/images/news/emma-thompson-solo-exhibition/slides/4/image.jpg",
       "imageAlt": {
         "en": "A purple and white swirl",
         "fr": "Un tourbillon violet et blanc",

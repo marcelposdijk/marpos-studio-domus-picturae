@@ -1,7 +1,7 @@
 {
   "name": "Isabella Rodriguez",
   "isEstate": true,
-  "image": "/images/artists/isabella-rodriguez/image.jpg",
+  "image": "/src/assets/images/artists/isabella-rodriguez/image.jpg",
   "imageAlt": {
     "en": "Portrait of Isabella Rodriguez",
     "fr": "Portrait de Isabella Rodriguez",

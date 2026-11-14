@@ -1,7 +1,7 @@
 {
   "title": "Interior view of Domus Picturae gallery showcasing contemporary artworks",
   "image": {
-    "src": "/images/about/images/0/image.jpg",
+    "src": "/src/assets/images/about/images/0/image.jpg",
     "alt": "Interior view of Domus Picturae gallery showcasing contemporary artworks"
   },
   "categories": ["about"],

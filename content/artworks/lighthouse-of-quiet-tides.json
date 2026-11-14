@@ -6,7 +6,7 @@
   },
   "year": 2015,
   "artist": "marcus-weber",
-  "image": "/images/artworks/lighthouse-of-quiet-tides/image.png",
+  "image": "/src/assets/images/artworks/lighthouse-of-quiet-tides/image.png",
   "imageAlt": {
     "en": "Digital rendering of a lighthouse surrounded by soft glowing tides",
     "fr": "Rendu numérique d'un phare entouré de marées doucement lumineuses",

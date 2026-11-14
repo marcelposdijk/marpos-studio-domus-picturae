@@ -6,7 +6,7 @@
   },
   "year": 2025,
   "artist": "marcus-weber",
-  "image": "/images/artworks/fragmented-city/image.jpg",
+  "image": "/src/assets/images/artworks/fragmented-city/image.jpg",
   "imageAlt": {
     "en": "Geometric abstraction of urban structures",
     "fr": "Abstraction géométrique de structures urbaines",
