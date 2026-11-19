@@ -6,7 +6,7 @@
   },
   "year": 2020,
   "artist": "emma-thompson",
-  "image": "/src/assets/images/artworks/aurora-syntax/image.jpg",
+  "image": "/src/assets/artworks/aurora-syntax/image.jpg",
   "imageAlt": {
     "en": "Digital abstraction inspired by northern lights",
     "fr": "Abstraction numérique inspirée des aurores boréales",

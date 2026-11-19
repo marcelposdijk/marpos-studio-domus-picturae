@@ -34,9 +34,9 @@ function originalHashes(root) {
           .every((part) => part && part !== "." && part !== "..")),
     "Media root must be project-relative",
   );
-  const paths = [join(root, "src/assets/images"), join(root, mediaRoot)];
+  const paths = new Set([join(root, "src/assets"), join(root, mediaRoot)]);
   return new Set(
-    paths
+    [...paths]
       .flatMap(files)
       .filter((p) => photos.test(p))
       .map(hash),
@@ -55,7 +55,9 @@ export function verifyMediaOutput(root, output) {
     if (/\.(?:html|css|js|json)$/i.test(file)) {
       const text = readFileSync(file, "utf8");
       assert.ok(
-        !/\/src\/assets\/images\//.test(text),
+        !/\/src\/assets\/[^\s"'<>)]*\.(?:jpe?g|png|webp|gif|avif)\b/i.test(
+          text,
+        ),
         `Source image reference published: ${file}`,
       );
       assert.ok(

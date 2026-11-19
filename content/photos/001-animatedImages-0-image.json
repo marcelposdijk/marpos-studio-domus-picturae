@@ -1,7 +1,7 @@
 {
   "title": "Featured artist work displayed at the gallery",
   "image": {
-    "src": "/src/assets/images/about/animatedImages/0/image.jpg",
+    "src": "/src/assets/about/animatedImages/0/image.jpg",
     "alt": "Featured artist work displayed at the gallery"
   },
   "categories": ["about"],

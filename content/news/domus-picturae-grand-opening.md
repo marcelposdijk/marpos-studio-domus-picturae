@@ -11,7 +11,7 @@
     "fr": "Domus Picturae ouvre ses portes à Rome et crée un nouvel espace de dialogue et de découverte autour de l'art contemporain.",
     "de": "Domus Picturae öffnet in Rom seine Türen und schafft einen neuen Ort für Dialog und Entdeckung zeitgenössischer Kunst."
   },
-  "featuredImage": "/src/assets/images/news/domus-picturae-grand-opening/featuredImage.jpg",
+  "featuredImage": "/src/assets/news/domus-picturae-grand-opening/featuredImage.jpg",
   "featuredImageAlt": {
     "en": "Domus Picturae gallery interior during the opening reception",
     "fr": "Intérieur de la galerie Domus Picturae lors de la réception d'ouverture",
@@ -19,7 +19,7 @@
   },
   "slides": [
     {
-      "image": "/src/assets/images/news/domus-picturae-grand-opening/slides/0/image.jpg",
+      "image": "/src/assets/news/domus-picturae-grand-opening/slides/0/image.jpg",
       "imageAlt": {
         "en": "Five brown wooden chairs",
         "fr": "Cinq chaises en bois brun",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/domus-picturae-grand-opening/slides/1/image.jpg",
+      "image": "/src/assets/news/domus-picturae-grand-opening/slides/1/image.jpg",
       "imageAlt": {
         "en": "Two black spheres",
         "fr": "Deux sphères noires",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/domus-picturae-grand-opening/slides/2/image.jpg",
+      "image": "/src/assets/news/domus-picturae-grand-opening/slides/2/image.jpg",
       "imageAlt": {
         "en": "Grey tunnel walkway",
         "fr": "Passage en tunnel gris",

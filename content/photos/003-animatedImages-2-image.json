@@ -1,7 +1,7 @@
 {
   "title": "Exhibition space showcasing diverse artistic expressions",
   "image": {
-    "src": "/src/assets/images/about/animatedImages/2/image.jpg",
+    "src": "/src/assets/about/animatedImages/2/image.jpg",
     "alt": "Exhibition space showcasing diverse artistic expressions"
   },
   "categories": ["about"],

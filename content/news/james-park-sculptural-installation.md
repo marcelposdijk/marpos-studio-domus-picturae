@@ -11,7 +11,7 @@
     "fr": "Une nouvelle installation in situ de James Park explore la relation entre forme, espace et perception dans l'espace d'exposition principal de la galerie.",
     "de": "Eine neue ortsspezifische Installation von James Park erkundet das Verhältnis von Form, Raum und Wahrnehmung im Hauptausstellungsraum der Galerie."
   },
-  "featuredImage": "/src/assets/images/news/james-park-sculptural-installation/featuredImage.jpg",
+  "featuredImage": "/src/assets/news/james-park-sculptural-installation/featuredImage.jpg",
   "featuredImageAlt": {
     "en": "James Park's Spatial Dialogues installation at Domus Picturae",
     "fr": "L'installation Spatial Dialogues de James Park à Domus Picturae",
@@ -19,7 +19,7 @@
   },
   "slides": [
     {
-      "image": "/src/assets/images/news/james-park-sculptural-installation/slides/0/image.jpg",
+      "image": "/src/assets/news/james-park-sculptural-installation/slides/0/image.jpg",
       "imageAlt": {
         "en": "A woman looks at a large abstract art installation",
         "fr": "Une femme regarde une grande installation abstraite",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/james-park-sculptural-installation/slides/1/image.jpg",
+      "image": "/src/assets/news/james-park-sculptural-installation/slides/1/image.jpg",
       "imageAlt": {
         "en": "A large sculptural work",
         "fr": "Une grande œuvre sculpturale",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/james-park-sculptural-installation/slides/2/image.jpg",
+      "image": "/src/assets/news/james-park-sculptural-installation/slides/2/image.jpg",
       "imageAlt": {
         "en": "Museum building",
         "fr": "Bâtiment de musée",

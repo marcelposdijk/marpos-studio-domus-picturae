@@ -11,7 +11,7 @@
     "fr": "Une série complète de douze portraits de Sophie Laurent a été acquise par une importante collection privée européenne, une reconnaissance majeure du travail de l'artiste.",
     "de": "Eine vollständige Serie von zwölf Porträts von Sophie Laurent wurde von einer bedeutenden europäischen Privatsammlung erworben – eine wichtige Anerkennung ihres Werks."
   },
-  "featuredImage": "/src/assets/images/news/sophie-laurent-portrait-series/featuredImage.jpg",
+  "featuredImage": "/src/assets/news/sophie-laurent-portrait-series/featuredImage.jpg",
   "featuredImageAlt": {
     "en": "Portrait by Sophie Laurent from the Intimate Portraits series",
     "fr": "Portrait de Sophie Laurent de la série Intimate Portraits",

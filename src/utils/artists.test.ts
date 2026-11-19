@@ -36,7 +36,7 @@ describe("listArtists", () => {
 });
 
 describe("presentArtist", () => {
-  const portrait = "/src/assets/images/artworks/the-blue-interval/image.jpg";
+  const portrait = "/src/assets/artworks/the-blue-interval/image.jpg";
 
   it("resolves the href, CV link and portrait alt for a locale", () => {
     const p = presentArtist(

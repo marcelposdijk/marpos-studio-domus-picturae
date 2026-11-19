@@ -11,7 +11,7 @@
     "fr": "La galerie présentera une sélection d'œuvres à Autumn Art Fair 2025, avec des artistes de son programme dont Sophie Laurent, James Park et Yuki Tanaka.",
     "de": "Die Galerie zeigt auf der Autumn Art Fair 2025 eine kuratierte Auswahl von Werken, darunter Arbeiten von Sophie Laurent, James Park und Yuki Tanaka."
   },
-  "featuredImage": "/src/assets/images/news/autumn-art-fair-2025-participation/featuredImage.jpg",
+  "featuredImage": "/src/assets/news/autumn-art-fair-2025-participation/featuredImage.jpg",
   "featuredImageAlt": {
     "en": "Autumn Art Fair 2025 preview",
     "fr": "Aperçu de l'Autumn Art Fair 2025",
@@ -19,7 +19,7 @@
   },
   "slides": [
     {
-      "image": "/src/assets/images/news/autumn-art-fair-2025-participation/slides/0/image.jpg",
+      "image": "/src/assets/news/autumn-art-fair-2025-participation/slides/0/image.jpg",
       "imageAlt": {
         "en": "A group of people in a museum looking at paintings",
         "fr": "Un groupe de personnes dans un musée regardant des tableaux",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/autumn-art-fair-2025-participation/slides/1/image.jpg",
+      "image": "/src/assets/news/autumn-art-fair-2025-participation/slides/1/image.jpg",
       "imageAlt": {
         "en": "Woman in a white and grey plaid blazer",
         "fr": "Femme en blazer à carreaux blanc et gris",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/autumn-art-fair-2025-participation/slides/2/image.jpg",
+      "image": "/src/assets/news/autumn-art-fair-2025-participation/slides/2/image.jpg",
       "imageAlt": {
         "en": "A black and white photo of a museum building",
         "fr": "Photo en noir et blanc d'un bâtiment de musée",

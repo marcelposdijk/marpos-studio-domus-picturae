@@ -1,7 +1,7 @@
 {
   "title": "Portrait of James Park",
   "image": {
-    "src": "/src/assets/images/artists/james-park/image.jpg",
+    "src": "/src/assets/artists/james-park/image.jpg",
     "alt": "Portrait of James Park"
   },
   "categories": ["artists"],

@@ -5,7 +5,7 @@
     "fr": "Art numérique et médias traditionnels : combler le fossé",
     "de": "Digitale Kunst und traditionelle Medien: Brücken bauen"
   },
-  "image": "/src/assets/images/workshops/digital-art-and-traditional-media/image.jpg",
+  "image": "/src/assets/workshops/digital-art-and-traditional-media/image.jpg",
   "imageAlt": {
     "en": "A figure in a neon-lit city at night",
     "fr": "Une silhouette dans une ville éclairée au néon, la nuit",

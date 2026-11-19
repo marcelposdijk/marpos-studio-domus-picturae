@@ -23,7 +23,7 @@ body:
     attributes:
       label: Environment
       description: Node and pnpm versions, browser and OS if the bug is in the site rather than the build.
-      placeholder: "Node 22.x, pnpm 10.x, Firefox 140 on macOS"
+      placeholder: "Node 24.x, pnpm 10.x, Firefox 140 on macOS"
   - type: textarea
     id: logs
     attributes:

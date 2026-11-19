@@ -17,7 +17,7 @@ const library = yaml("content/.navigation.yml").studio.libraries.images;
 assert.equal(library, "photos");
 const media = yaml(`content/${library}/.navigation.yml`).studio;
 assert.equal(media.view, "media");
-assert.equal(yaml(".navigation.yml").studio.mediaRoot, "src/assets/images");
+assert.equal(yaml(".navigation.yml").studio.mediaRoot, "src/assets");
 assert.equal(media.media.directory, "library");
 assert.ok(media.media.maxBytes > 0 && media.media.maxBytes <= 10485760);
 assert.ok(media.media.formats.includes("webp"));
@@ -30,9 +30,9 @@ for (const video of videos)
   assert.match(video.data.youtubeId, /^[A-Za-z0-9_-]{11}$/);
 const imagePaths = new Set();
 const checkImage = (url) => {
-  assert.match(url, /^\/src\/assets\/images\/.+\.(jpe?g|png|webp|gif|avif)$/i);
+  assert.match(url, /^\/src\/assets\/.+\.(jpe?g|png|webp|gif|avif)$/i);
   const file = realpathSync(resolve(url.slice(1)));
-  assert.ok(file.startsWith(realpathSync("src/assets/images") + sep));
+  assert.ok(file.startsWith(realpathSync("src/assets") + sep));
   imagePaths.add(url);
 };
 for (const photo of photos) {
@@ -70,7 +70,7 @@ const assertRoute = (path, locale) => {
 const visit = (v) => {
   if (
     typeof v === "string" &&
-    /^\/src\/assets\/images\/.+\.(jpe?g|png|webp|gif|avif)$/i.test(v)
+    /^\/src\/assets\/.+\.(jpe?g|png|webp|gif|avif)$/i.test(v)
   ) {
     checkImage(v);
     assert.ok(librarySources.has(v), `Missing library record for ${v}`);

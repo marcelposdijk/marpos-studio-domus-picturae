@@ -6,7 +6,7 @@
   },
   "year": 2022,
   "artist": "luca-moretti",
-  "image": "/src/assets/images/artworks/lunar-fragments/image.jpg",
+  "image": "/src/assets/artworks/lunar-fragments/image.jpg",
   "imageAlt": {
     "en": "Abstract forms resembling lunar surfaces",
     "fr": "Formes abstraites évoquant des surfaces lunaires",

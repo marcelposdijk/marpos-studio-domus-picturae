@@ -1,7 +1,7 @@
 {
   "title": "Artworks displayed in the gallery's main exhibition hall",
   "image": {
-    "src": "/src/assets/images/about/images/1/image.jpg",
+    "src": "/src/assets/about/images/1/image.jpg",
     "alt": "Artworks displayed in the gallery's main exhibition hall"
   },
   "categories": ["about"],

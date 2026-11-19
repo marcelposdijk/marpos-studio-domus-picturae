@@ -1,7 +1,7 @@
 {
   "title": "Gallery collection highlighting contemporary artists",
   "image": {
-    "src": "/src/assets/images/about/animatedImages/4/image.jpg",
+    "src": "/src/assets/about/animatedImages/4/image.jpg",
     "alt": "Gallery collection highlighting contemporary artists"
   },
   "categories": ["about"],

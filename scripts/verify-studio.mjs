@@ -206,7 +206,7 @@ try {
     directory: "photos",
   });
   const src = typeof upload === "string" ? upload : upload.src;
-  assert.match(src, /^\/src\/assets\/images\/library\//);
+  assert.match(src, /^\/src\/assets\/library\//);
   const photo = call("new_content", {
     collection: "photos",
     title: "Library upload check",
@@ -233,7 +233,7 @@ try {
   });
   const videoThumbnail =
     typeof videoUpload === "string" ? videoUpload : videoUpload.src;
-  assert.match(videoThumbnail, /^\/src\/assets\/images\/video-thumbnails\//);
+  assert.match(videoThumbnail, /^\/src\/assets\/video-thumbnails\//);
   const video = call("new_content", {
     collection: "videos",
     title: "Video library check",
@@ -291,7 +291,7 @@ try {
   assert.ok(frenchNews.includes(marker));
   assert.ok(frenchNews.includes("youtube-nocookie.com/embed/"));
   assert.ok(frenchNews.includes("Library image"));
-  assert.ok(!frenchNews.includes("/src/assets/images/"));
+  assert.ok(!frenchNews.includes("/src/assets/"));
   assert.ok(frenchNews.includes("srcset="));
   const englishNews = readFileSync(
     join(temporary, "dist/news/domus-picturae-grand-opening/index.html"),

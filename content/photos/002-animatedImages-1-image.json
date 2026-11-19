@@ -1,7 +1,7 @@
 {
   "title": "Curated selection of modern art pieces",
   "image": {
-    "src": "/src/assets/images/about/animatedImages/1/image.jpg",
+    "src": "/src/assets/about/animatedImages/1/image.jpg",
     "alt": "Curated selection of modern art pieces"
   },
   "categories": ["about"],

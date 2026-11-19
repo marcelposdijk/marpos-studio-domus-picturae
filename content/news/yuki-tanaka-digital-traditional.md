@@ -11,7 +11,7 @@
     "fr": "Le nouveau corpus de Yuki Tanaka explore la rencontre entre technologie numérique et artisanat traditionnel, interrogeant notre relation au virtuel comme au matériel.",
     "de": "Yuki Tanakas neue Werkgruppe erkundet die Schnittstelle von digitaler Technologie und traditionellem Handwerk und befragt unser Verhältnis zum Virtuellen wie zum Materiellen."
   },
-  "featuredImage": "/src/assets/images/news/yuki-tanaka-digital-traditional/featuredImage.jpg",
+  "featuredImage": "/src/assets/news/yuki-tanaka-digital-traditional/featuredImage.jpg",
   "featuredImageAlt": {
     "en": "Yuki Tanaka's Hybrid Landscapes installation",
     "fr": "L'installation Hybrid Landscapes de Yuki Tanaka",
@@ -19,7 +19,7 @@
   },
   "slides": [
     {
-      "image": "/src/assets/images/news/yuki-tanaka-digital-traditional/slides/0/image.jpg",
+      "image": "/src/assets/news/yuki-tanaka-digital-traditional/slides/0/image.jpg",
       "imageAlt": {
         "en": "A mountain lake",
         "fr": "Un lac de montagne",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/yuki-tanaka-digital-traditional/slides/1/image.jpg",
+      "image": "/src/assets/news/yuki-tanaka-digital-traditional/slides/1/image.jpg",
       "imageAlt": {
         "en": "Bird's-eye view of green mountains",
         "fr": "Vue aérienne de montagnes verdoyantes",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/yuki-tanaka-digital-traditional/slides/2/image.jpg",
+      "image": "/src/assets/news/yuki-tanaka-digital-traditional/slides/2/image.jpg",
       "imageAlt": {
         "en": "Aerial photograph of sea waves in daylight",
         "fr": "Photographie aérienne de vagues en plein jour",
@@ -58,7 +58,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/yuki-tanaka-digital-traditional/slides/3/image.jpg",
+      "image": "/src/assets/news/yuki-tanaka-digital-traditional/slides/3/image.jpg",
       "imageAlt": {
         "en": "A mountain range with water in the foreground",
         "fr": "Une chaîne de montagnes avec de l'eau au premier plan",
@@ -71,7 +71,7 @@
       }
     },
     {
-      "image": "/src/assets/images/news/yuki-tanaka-digital-traditional/slides/4/image.jpg",
+      "image": "/src/assets/news/yuki-tanaka-digital-traditional/slides/4/image.jpg",
       "imageAlt": {
         "en": "Rolling hills at dusk",
         "fr": "Collines au crépuscule",

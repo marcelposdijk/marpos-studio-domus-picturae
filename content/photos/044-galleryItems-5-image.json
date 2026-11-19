@@ -1,7 +1,7 @@
 {
   "title": "Artwork 6",
   "image": {
-    "src": "/src/assets/images/homepage/about/galleryItems/5/image.jpg",
+    "src": "/src/assets/homepage/about/galleryItems/5/image.jpg",
     "alt": "Artwork 6"
   },
   "categories": ["homepage"],

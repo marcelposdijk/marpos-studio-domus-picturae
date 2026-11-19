@@ -8,7 +8,7 @@ vi.mock("astro:assets", () => ({
 }));
 import { optimizeStoryImages } from "./story-images";
 
-const source = "/src/assets/images/artworks/the-blue-interval/image.jpg";
+const source = "/src/assets/artworks/the-blue-interval/image.jpg";
 
 describe("optimized story images", () => {
   it("transforms inserted HTML and Markdown-rendered images and linked originals", async () => {
@@ -34,7 +34,7 @@ describe("optimized story images", () => {
 
   it("fails the build for missing local images", async () => {
     await expect(
-      optimizeStoryImages('<img src="/src/assets/images/missing.jpg">'),
+      optimizeStoryImages('<img src="/src/assets/missing.jpg">'),
     ).rejects.toThrow("Image not found");
   });
 });

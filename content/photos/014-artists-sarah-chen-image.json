@@ -1,7 +1,7 @@
 {
   "title": "Portrait of Sarah Chen",
   "image": {
-    "src": "/src/assets/images/artists/sarah-chen/image.jpg",
+    "src": "/src/assets/artists/sarah-chen/image.jpg",
     "alt": "Portrait of Sarah Chen"
   },
   "categories": ["artists"],

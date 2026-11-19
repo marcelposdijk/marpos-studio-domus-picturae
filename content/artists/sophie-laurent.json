@@ -1,7 +1,7 @@
 {
   "name": "Sophie Laurent",
   "isEstate": false,
-  "image": "/src/assets/images/artists/sophie-laurent/image.jpg",
+  "image": "/src/assets/artists/sophie-laurent/image.jpg",
   "imageAlt": {
     "en": "Portrait of Sophie Laurent",
     "fr": "Portrait de Sophie Laurent",

@@ -13,7 +13,7 @@ pnpm dev
 
 The site runs at `http://localhost:4321` and the Keystatic admin at `/keystatic`. No environment variables are needed; the forms run in demo mode until `.env` provides endpoints (see `.env.template`).
 
-Node 22 and pnpm 10 are what CI uses; `packageManager` in `package.json` pins the exact pnpm version for Corepack.
+CI uses the Node 24 release line from `.nvmrc`; `packageManager` in `package.json` pins the exact pnpm version for Corepack.
 
 ## Before opening a pull request
 
