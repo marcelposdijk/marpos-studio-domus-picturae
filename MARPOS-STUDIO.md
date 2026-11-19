@@ -18,7 +18,7 @@ Existing entries have all three preview addresses in `studio.preview.json`. For 
 
 An item used on several pages has a shared identifier; Studio explains why its existing slug is read-only. Display titles can be edited freely. Developer identifier changes must preserve incoming references and regenerate preview mappings.
 
-All saves write to this separate local checkout. GitHub source hosting is separate from website deployment. **This fork is not deployed.**
+All saves write to this separate local checkout. Publishing to the main branch triggers the [live gallery demo](https://marcelposdijk.github.io/marpos-studio-domus-picturae/) build on GitHub Pages.
 
 ## Verification
 

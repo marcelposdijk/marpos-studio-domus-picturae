@@ -8,6 +8,7 @@ import { defaultLocale, locales } from "./src/i18n/config.ts";
 // https://astro.build/config
 export default defineConfig({
   site: process.env.SITE_URL || "https://domus-picturae.example",
+  base: process.env.BASE_PATH || "/",
   output: "static",
   trailingSlash: "never",
 

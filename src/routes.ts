@@ -1,5 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 import { localizePath, type Locale } from "@/i18n/config";
+import { sitePath } from "@utils/site-path";
 import { ui } from "@/i18n/ui";
 import { sectionFor } from "@utils/availability";
 
@@ -51,13 +52,13 @@ export const routes = {
   article: (locale: Locale, article: Article | string) =>
     localizePath(locale, `/news/${withId(article)}`),
   /** An artist's CV, served straight from `public/cv/`. Not localised. */
-  cv: (artist: Artist | string) => `/cv/${withId(artist)}.pdf`,
+  cv: (artist: Artist | string) => sitePath(`/cv/${withId(artist)}.pdf`),
   /**
    * The page presenting the codebase to developers. English only on purpose:
    * it describes the template, not the gallery, so it sits outside the
    * per-locale route folders.
    */
-  template: () => "/template",
+  template: () => sitePath("/template"),
 };
 
 /** Pages published in the default locale only: no hreflang alternates, no language switch. */

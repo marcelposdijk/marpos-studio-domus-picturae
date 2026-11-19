@@ -43,6 +43,7 @@ for (const photo of photos) {
 const librarySources = new Set(photos.map((p) => p.data.image.src));
 const preview = json("studio.preview.json");
 const htmlFile = (path) => `dist${path === "/" ? "" : path}/index.html`;
+const base = (process.env.BASE_PATH || "").replace(/\/$/, "");
 const assets = new Set();
 let routesChecked = 0;
 const assertRoute = (path, locale) => {
@@ -50,10 +51,14 @@ const assertRoute = (path, locale) => {
   assert.ok(existsSync(file), `Missing route ${path}`);
   const html = readFileSync(file, "utf8");
   assert.match(html, new RegExp(`<html[^>]+lang=["']${locale}`));
-  for (const match of html.matchAll(
-    /(?:src|href)=["'](\/(?:_astro|images)\/[^"']+)["']/g,
-  )) {
-    const src = match[1].split(/[?#]/)[0];
+  for (const match of html.matchAll(/(?:src|href)=["'](\/[^"']+)["']/g)) {
+    const pathname = match[1].split(/[?#]/)[0];
+    assert.ok(
+      pathname.startsWith(base + "/"),
+      `URL outside the deployment path on ${path}: ${pathname}`,
+    );
+    const src = pathname.slice(base.length);
+    if (!/^\/(?:_astro|images)\//.test(src)) continue;
     assert.ok(
       existsSync(`dist${decodeURIComponent(src)}`),
       `Missing rendered asset ${src} on ${path}`,

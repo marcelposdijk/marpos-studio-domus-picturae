@@ -2,6 +2,7 @@ import type { ImageMetadata } from "astro";
 import type { CollectionEntry } from "astro:content";
 import type { Locale } from "@/i18n/config";
 import { text } from "@/i18n/localized";
+import { sitePath } from "@utils/site-path";
 import { routes } from "@/routes";
 import { picture, pictures, type Picture } from "./images";
 import { formatDate, getYear } from "./utils";
@@ -169,7 +170,7 @@ export function presentWorkshop(
     title,
     registerTitle: text(data.registerTitle, locale),
     registerInfo: text(data.registerInfo, locale),
-    video: data.previewClip || null,
+    video: data.previewClip ? sitePath(data.previewClip) : null,
     image: picture(data, locale, title),
   };
 }

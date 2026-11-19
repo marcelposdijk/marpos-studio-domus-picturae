@@ -3,6 +3,7 @@
  * Fixed top bar plus the full-screen menu overlay. Themed entirely through
  * tokens, so the same component serves light and dark pages.
  */
+import { sitePath } from "@utils/site-path";
 import Icon from "@ui/icons/Icon.astro";
 import LanguageSwitcher from "@ui/LanguageSwitcher.astro";
 import { stripLocale, useUI, type Locale } from "@/i18n";
@@ -74,8 +75,8 @@ const isTranslated = pageContext(Astro, locale).alternates.length > 1;
         <!-- No autoplay/preload: `autoplay` makes browsers fetch the whole file on
           every page load; the script starts it when the menu opens. -->
         <video playsinline loop muted preload="none">
-          <source src="/showreel.webm" type="video/webm" />
-          <source src="/showreel.mp4" type="video/mp4" />
+          <source src={sitePath("/showreel.webm")} type="video/webm" />
+          <source src={sitePath("/showreel.mp4")} type="video/mp4" />
         </video>
       </div>
       {site.showreelHref && (

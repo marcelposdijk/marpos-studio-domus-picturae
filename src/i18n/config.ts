@@ -7,6 +7,8 @@
  * label and a language tag, add its UI strings in `ui.ts`, then add a
  * `src/pages/<locale>/` route folder (see docs/i18n.md).
  */
+import { projectPath, sitePath } from "../utils/site-path";
+
 export const locales = ["en", "fr", "de"] as const;
 
 export type Locale = (typeof locales)[number];
@@ -45,19 +47,19 @@ export function resolveLocale(value: string | undefined): Locale {
  */
 export function localizePath(locale: Locale, path = "/"): string {
   const clean = path.startsWith("/") ? path : `/${path}`;
-  if (locale === defaultLocale) return clean;
-  return clean === "/" ? `/${locale}` : `/${locale}${clean}`;
+  if (locale === defaultLocale) return sitePath(clean);
+  return sitePath(clean === "/" ? `/${locale}` : `/${locale}${clean}`);
 }
 
 /** Strip a leading locale segment from a pathname. */
 export function stripLocale(pathname: string): string {
-  const segments = pathname.split("/").filter(Boolean);
+  const segments = projectPath(pathname).split("/").filter(Boolean);
   if (segments.length > 0 && isLocale(segments[0])) segments.shift();
   return `/${segments.join("/")}`;
 }
 
 /** Read the locale from a pathname (`/fr/about` → `fr`, `/about` → default). */
 export function localeFromPath(pathname: string): Locale {
-  const first = pathname.split("/").filter(Boolean)[0];
+  const first = projectPath(pathname).split("/").filter(Boolean)[0];
   return isLocale(first) ? first : defaultLocale;
 }

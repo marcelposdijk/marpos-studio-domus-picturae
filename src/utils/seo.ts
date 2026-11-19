@@ -57,19 +57,21 @@ export function pageContext(
   }
   const site = astro.site;
   const basePath = stripLocale(astro.url.pathname);
-  const published: readonly Locale[] = untranslatedPaths.includes(basePath)
+  const published: readonly Locale[] = untranslatedPaths.includes(
+    localizePath(defaultLocale, basePath),
+  )
     ? [defaultLocale]
     : locales;
   return {
     url: astro.url,
-    site,
+    site: new URL(localizePath(defaultLocale, "/"), site),
     locale,
     basePath,
     alternates: published.map((l) => {
       const path = localizePath(l, basePath);
       return { locale: l, path, href: new URL(path, site).href };
     }),
-    xDefault: new URL(basePath, site).href,
+    xDefault: new URL(localizePath(defaultLocale, basePath), site).href,
   };
 }
 

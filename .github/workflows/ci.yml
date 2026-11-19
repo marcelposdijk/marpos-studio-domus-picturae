@@ -1,17 +1,21 @@
-name: CI
+name: Verify and publish gallery
 
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@v6
-      - uses: actions/setup-node@v7
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
@@ -19,4 +23,34 @@ jobs:
       - run: pnpm format:check
       - run: pnpm check
       - run: pnpm test
-      - run: pnpm build
+      - uses: actions/configure-pages@v5
+        id: pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+      - name: Build and verify the gallery
+        run: |
+          pnpm build
+          pnpm verify:demo
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        with:
+          path: dist
+  deploy:
+    needs: verify
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish gallery
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -8,6 +8,7 @@
  *   to know about it.
  */
 import { Font, getImage } from "astro:assets";
+import { sitePath } from "@utils/site-path";
 import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
 import type { Thing, WithContext } from "schema-dts";
@@ -89,19 +90,23 @@ const defaultSchema = webPageSchema(page, site, {
         link: [
           {
             rel: "icon",
-            href: "/favicon-96x96.png",
+            href: sitePath("/favicon-96x96.png"),
             type: "image/png",
             sizes: "96x96",
           },
-          { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-          { rel: "shortcut icon", href: "/favicon.ico" },
+          {
+            rel: "icon",
+            href: sitePath("/favicon.svg"),
+            type: "image/svg+xml",
+          },
+          { rel: "shortcut icon", href: sitePath("/favicon.ico") },
           {
             rel: "apple-touch-icon",
-            href: "/apple-touch-icon.png",
+            href: sitePath("/apple-touch-icon.png"),
             sizes: "180x180",
           },
-          { rel: "manifest", href: "/site.webmanifest" },
-          { rel: "sitemap", href: "/sitemap-index.xml" },
+          { rel: "manifest", href: sitePath("/site.webmanifest") },
+          { rel: "sitemap", href: sitePath("/sitemap-index.xml") },
           ...page.alternates.map(({ locale: l, href }) => ({
             rel: "alternate",
             hreflang: l,

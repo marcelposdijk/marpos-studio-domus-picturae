@@ -24,4 +24,4 @@ Single-context: one `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/age
 - See `MARPOS-STUDIO.md`. Do not reintroduce Keystatic paths or an additional admin.
 - Preserve the full media contract: native photo/video schemas, records, root library references and collection media settings.
 - Run `pnpm verify:demo` after build. For the optional real Studio integration check use `MARPOS_STUDIO_ROOT` with `pnpm verify:studio`.
-- This fork is not deployed. Never describe the upstream Vercel URL as its deployment.
+- The Marpos demonstration publishes to https://marcelposdijk.github.io/marpos-studio-domus-picturae/

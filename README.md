@@ -2,7 +2,7 @@
 
 A multilingual gallery demonstration adapted from [mearashadowfax/DomusPicturae](https://github.com/mearashadowfax/DomusPicturae), MIT. The gallery design, animations and English/French/German content are preserved. Marpos Studio provides the editing workspace.
 
-**This fork is not deployed.** The upstream Vercel website is not this demonstration. `SITE_URL` defaults to the reserved origin `https://domus-picturae.example` until a production host is chosen.
+Explore the [live Marpos gallery demo](https://marcelposdijk.github.io/marpos-studio-domus-picturae/).
 
 ## Try it
 
@@ -47,7 +47,7 @@ MARPOS_STUDIO_ROOT=/absolute/path/to/marpos-studio pnpm verify:studio
 
 The optional integration check requires Studio’s `content_cli` example to be built. It runs on a disposable copy and checks native discovery, one-document language editing/save/reopen, all six entity creation forms, photo/video choosers, actual uploads, video validation and rendering in a fresh website build.
 
-The site builds to static `dist/`. Before deployment, configure `SITE_URL`, clean URLs and any intended form services. Forms keep upstream demo mode until configured. GitHub Pages needs an explicit base-path review; it has not been enabled.
+GitHub Actions builds and publishes `dist/` to GitHub Pages after changes reach `main`. See [deployment](docs/deployment.md) for the build settings. Forms run in demo mode unless a delivery service is configured.
 
 See [content](docs/content.md), [locale conventions](docs/i18n.md), [deployment](docs/deployment.md), [source provenance](docs/SOURCE-PROVENANCE.md), the [original README](docs/UPSTREAM-README.md) and [LICENSE](LICENSE).
 

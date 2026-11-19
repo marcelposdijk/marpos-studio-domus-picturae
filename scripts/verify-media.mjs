@@ -1,7 +1,7 @@
 import { parse } from "yaml";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, unlinkSync } from "node:fs";
 import { join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -80,8 +80,7 @@ export function optimizedMediaOnly() {
       "astro:config:done": ({ config }) => {
         root = fileURLToPath(config.root);
       },
-      "astro:build:done": async ({ dir }) => {
-        const { unlinkSync } = await import("node:fs");
+      "astro:build:done": ({ dir }) => {
         const output = fileURLToPath(dir);
         const originals = originalHashes(root);
         const emitted = files(output);

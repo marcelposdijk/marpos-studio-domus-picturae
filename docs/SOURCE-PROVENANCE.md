@@ -14,7 +14,7 @@ The original design components, CSS, locale UI strings, artist/artwork presentat
 
 Verified with Studio's exact Node 22.23.3 runtime, pinned Astro 7.4.0, native collection inspection and the actual ContentStore upload/save service. The desktop app showed the 77-image library, the artwork image chooser, structured locale fields and live English/French/German artwork previews. See `MARPOS-STUDIO.md` for the demo steps and check commands.
 
-This fork has not been deployed. No production publication or GitHub Pages configuration was performed.
+The Marpos fork has its own [GitHub Pages demo](https://marcelposdijk.github.io/marpos-studio-domus-picturae/).
 
 ## Unified editor revision
 
