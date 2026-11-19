@@ -23,6 +23,12 @@ export const localeLabels: Record<Locale, string> = {
   de: "DE",
 };
 
+export const localeNames: Record<Locale, string> = {
+  en: "English",
+  fr: "Français",
+  de: "Deutsch",
+};
+
 /** BCP 47 tags used for `<html lang>`, `hreflang` and structured data. */
 export const localeTags: Record<Locale, string> = {
   en: "en-US",

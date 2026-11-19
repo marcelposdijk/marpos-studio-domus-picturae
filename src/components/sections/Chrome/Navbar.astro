@@ -5,6 +5,7 @@
  */
 import { sitePath } from "@utils/site-path";
 import Icon from "@ui/icons/Icon.astro";
+import LocaleDropdown from "@ui/LocaleDropdown.astro";
 import LanguageSwitcher from "@ui/LanguageSwitcher.astro";
 import { stripLocale, useUI, type Locale } from "@/i18n";
 import { getSiteIdentity } from "@utils/content";
@@ -33,6 +34,7 @@ const isTranslated = pageContext(Astro, locale).alternates.length > 1;
     <a href={homeUrl}>{site.name}</a>
   </div>
   <div class="navbar-actions">
+    {isTranslated && <LocaleDropdown locale={locale} />}
     {hasTemplatePage && (
       <a
         href={routes.template()}
@@ -395,7 +397,7 @@ const isTranslated = pageContext(Astro, locale).alternates.length > 1;
     }
 
     .navbar-actions {
-      gap: calc(20 * var(--unit-fx));
+      gap: calc(14 * var(--unit-fx));
     }
 
     .menu {
@@ -484,6 +486,7 @@ const isTranslated = pageContext(Astro, locale).alternates.length > 1;
   const menu = document.querySelector<HTMLElement>(".menu")!;
   const openButton = document.querySelector<HTMLButtonElement>(".navbar-open")!;
   const closeButton = document.querySelector<HTMLButtonElement>(".menu-close")!;
+  const localeDropdown = document.getElementById("navbar-locale-options");
   let isOpen = false;
 
   const showreel = menu.querySelector<HTMLVideoElement>(
@@ -491,6 +494,7 @@ const isTranslated = pageContext(Astro, locale).alternates.length > 1;
   );
 
   function openMenu() {
+    localeDropdown?.hidePopover?.();
     isOpen = true;
     menu.style.pointerEvents = "all";
     openButton.setAttribute("aria-expanded", "true");
@@ -530,7 +534,9 @@ const isTranslated = pageContext(Astro, locale).alternates.length > 1;
   let lastScroll = 0;
   window.addEventListener("scroll", () => {
     const current = window.scrollY;
-    bar.classList.toggle("is-hidden", current > 0 && current > lastScroll);
+    const hidesBar = current > 0 && current > lastScroll;
+    if (hidesBar) localeDropdown?.hidePopover?.();
+    bar.classList.toggle("is-hidden", hidesBar);
     lastScroll = current;
   });
 </script>

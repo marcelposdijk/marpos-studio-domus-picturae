@@ -21,6 +21,7 @@ const en = {
   menu: {
     open: "Menu",
     close: "Close",
+    language: "Language",
     template: "Template",
     showreel: "A glimpse inside",
     opensInNewTab: "(opens in a new tab)",
@@ -148,6 +149,7 @@ const fr: UIStrings = {
   menu: {
     open: "Menu",
     close: "Fermer",
+    language: "Langue",
     template: "Modèle",
     showreel: "Un aperçu de l'intérieur",
     opensInNewTab: "(s'ouvre dans un nouvel onglet)",
@@ -273,6 +275,7 @@ const de: UIStrings = {
   menu: {
     open: "Menü",
     close: "Schließen",
+    language: "Sprache",
     template: "Vorlage",
     showreel: "Ein Blick hinein",
     opensInNewTab: "(öffnet in neuem Tab)",
