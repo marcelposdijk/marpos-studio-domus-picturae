@@ -1,5 +1,7 @@
 title: News
 icon: i-lucide-newspaper
 studio:
+  libraries:
+    imageCategories: [news]
   filters: ["pubDate"]
   story: true

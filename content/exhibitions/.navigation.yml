@@ -1,5 +1,7 @@
 title: Exhibitions
 icon: i-lucide-gallery-horizontal-end
 studio:
+  libraries:
+    imageCategories: [exhibitions]
   filters: ["startDate"]
   story: true

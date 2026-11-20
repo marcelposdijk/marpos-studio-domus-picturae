@@ -1,5 +1,7 @@
 title: Artworks
 icon: i-lucide-palette
 studio:
+  libraries:
+    imageCategories: [artworks]
   filters: ["availability", "artist"]
   story: false

@@ -1,6 +1,8 @@
 title: Homepage
 icon: i-lucide-house
 studio:
+  libraries:
+    imageCategories: [homepage]
   filters: []
   story: false
   view: single

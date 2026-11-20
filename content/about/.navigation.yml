@@ -1,6 +1,8 @@
 title: About the gallery
 icon: i-lucide-info
 studio:
+  libraries:
+    imageCategories: [about]
   filters: []
   story: false
   view: single

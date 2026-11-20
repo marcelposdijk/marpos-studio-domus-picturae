@@ -1,5 +1,7 @@
 title: Workshops
 icon: i-lucide-paintbrush
 studio:
+  libraries:
+    imageCategories: [workshops]
   filters: []
   story: true

@@ -1,5 +1,7 @@
 title: Artists
 icon: i-lucide-users-round
 studio:
+  libraries:
+    imageCategories: [artists]
   filters: ["isEstate"]
   story: false
